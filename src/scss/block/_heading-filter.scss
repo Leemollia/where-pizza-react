@@ -1,0 +1,24 @@
+.heading {
+    display: flex;
+    margin: 30px 0;
+
+    &-filter {
+        justify-content: space-between;
+    }
+
+    .button-filter {
+        padding: 8px 16px;
+        background-color: #fff;
+        color: rgb(0, 0, 0);
+        border: 1px solid #F0F0F0;
+        height: fit-content;
+
+        span {
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width:$tabletWidth) {
+
+}

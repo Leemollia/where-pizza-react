@@ -1,0 +1,80 @@
+.check-address {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  margin: 16px 0;
+
+  &__input-label {
+    font-size: 18px;
+    margin: 0 32px;
+    min-width: fit-content;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+    margin: 16px 0;
+
+    .check-address__input-input {
+      width: 100%;
+      min-width: 10rem;
+      border: 1px solid #f0f0f0;
+      border-radius: 6px;
+      padding: 13px 10px;
+      margin: -1px -1px -1px 0px;
+
+      &:focus {
+        outline: 1px solid #ff7010;
+        margin: 1px -10px 1px 0px;
+      }
+
+      &::placeholder {
+        background: url(../../img/svg/Location.svg) no-repeat;
+        background-size: 16px;
+        text-indent: 18px;
+      }
+    }
+  }
+
+  &__input-button {
+    background: #ff7010;
+    min-width: 150px;
+    min-height: 48px;
+    color: white;
+    margin-left: 20px;
+
+    &::after {
+      content: "Проверить";
+    }
+  }
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .check-address {
+    flex-direction: column;
+
+    .check-address__input-label {
+        margin-top: 20px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .check-address__input-input {
+      border-radius: 0;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      margin-right: -10px;
+    }
+
+    .check-address__input-button {
+      min-width: 0;
+      margin: 0;
+      &::after {
+        content: url(../../img/svg/Check-address-arrow.svg);
+      }
+    }
+  }
+}
