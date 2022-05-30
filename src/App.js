@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import StickyCart from "./components/StickyCart";
 import HeaderSticky from "./components/HeaderSticky";
 import Footer from "./components/Footer";
-import MainContent from "./components/MainContent";
+import MainContent from "./components/MainContent/MainContent";
 import CheckAddress from "./components/CheckAddress";
 import Advertising from "./components/Advertising";
 import NavBar from "./components/NavBar";
