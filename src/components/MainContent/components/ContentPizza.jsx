@@ -1,8 +1,10 @@
 // import React from "react";
 
-// function ContentPizza() {
+// function ContentPizza({data}) {
 //   return (
+    
 //     <div>
+//       {items = data}
 //       <div className="heading heading-filter">
 //         <h2 id="pizzalink">Пицца</h2>
 //         <button className="button button-filter">

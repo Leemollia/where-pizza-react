@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-//import ContentPizza from "./components/ContentPizza"
+import ContentPizza from "./components/ContentPizza";
 
 function MainContent() {
   const [error, setError] = useState(null);
@@ -32,31 +32,41 @@ function MainContent() {
           <button className="button button-filter">
             <img
               loading="lazy"
-              src={require("../../img/svg/Filter.svg").default}
+              src="img/svg/Filter.svg"
               alt=""
             />
             <span>Фильтры</span>
           </button>
         </div>
         <div className="content content-sushi">
-        {items.sushi.map((item) => (
+          {items.sushi.map((item) => (
             <div className="content-card" key={item.id + item.title}>
-              {(function() {
-                  if (item.new) return <div className="content-card__label">New</div>
-                  else if (item.hit) return <div className="content-card__label">Hit</div>
-                  else {
-                    return ''
-                  }
-                })()}
-              <img loading="lazy" src={item.image}></img>
+              {(function () {
+                if (item.new)
+                  return <div className="content-card__label">New</div>;
+                else if (item.hit)
+                  return <div className="content-card__label">Hit</div>;
+                else {
+                  return "";
+                }
+              })()}
+              <img
+                loading="lazy"
+                src={item.image}
+                width="100%"
+                height="100%"
+              ></img>
               <div className="content-card_description">
                 <h3>{item.title}</h3>
                 <p>{item.ingredients}</p>
                 <div className="content-card_select">
-                    <button className="button button-select" uk-toggle="target: #modal-menu">
-                      <span>{"от " + item.price + " ₽"}</span>
-                    </button>
-                  </div>
+                  <button
+                    className="button button-select"
+                    uk-toggle="target: #modal-menu"
+                  >
+                    <span>{"от " + item.price + " ₽"}</span>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -65,24 +75,29 @@ function MainContent() {
           <h2 id="snackslink">Закуски</h2>
         </div>
         <div className="content content-snacks">
-        {items.snacks.map((item) => (
+          {items.snacks.map((item) => (
             <div className="content-card" key={item.id + item.title}>
-              {(function() {
-                  if (item.new) return <div className="content-card__label">New</div>
-                  else if (item.hit) return <div className="content-card__label">Hit</div>
-                  else {
-                    return ''
-                  }
-                })()}
+              {(function () {
+                if (item.new)
+                  return <div className="content-card__label">New</div>;
+                else if (item.hit)
+                  return <div className="content-card__label">Hit</div>;
+                else {
+                  return "";
+                }
+              })()}
               <img loading="lazy" src={item.image}></img>
               <div className="content-card_description">
                 <h3>{item.title}</h3>
                 <p>{item.ingredients}</p>
                 <div className="content-card_select">
-                    <button className="button button-select" uk-toggle="target: #modal-menu">
-                      <span>{"от " + item.price + " ₽"}</span>
-                    </button>
-                  </div>
+                  <button
+                    className="button button-select"
+                    uk-toggle="target: #modal-menu"
+                  >
+                    <span>{"от " + item.price + " ₽"}</span>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -91,24 +106,29 @@ function MainContent() {
           <h2 id="desertslink">Десерты</h2>
         </div>
         <div className="content content-deserts">
-        {items.deserts.map((item) => (
+          {items.deserts.map((item) => (
             <div className="content-card" key={item.id + item.title}>
-              {(function() {
-                  if (item.new) return <div className="content-card__label">New</div>
-                  else if (item.hit) return <div className="content-card__label">Hit</div>
-                  else {
-                    return ''
-                  }
-                })()}
+              {(function () {
+                if (item.new)
+                  return <div className="content-card__label">New</div>;
+                else if (item.hit)
+                  return <div className="content-card__label">Hit</div>;
+                else {
+                  return "";
+                }
+              })()}
               <img loading="lazy" src={item.image}></img>
               <div className="content-card_description">
                 <h3>{item.title}</h3>
                 <p>{item.ingredients}</p>
                 <div className="content-card_select">
-                    <button className="button button-select" uk-toggle="target: #modal-menu">
-                      <span>{"от " + item.price + " ₽"}</span>
-                    </button>
-                  </div>
+                  <button
+                    className="button button-select"
+                    uk-toggle="target: #modal-menu"
+                  >
+                    <span>{"от " + item.price + " ₽"}</span>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -117,24 +137,29 @@ function MainContent() {
           <h2 id="drinkslink">Напитки</h2>
         </div>
         <div className="content content-drinks">
-        {items.drinks.map((item) => (
+          {items.drinks.map((item) => (
             <div className="content-card" key={item.id + item.title}>
-              {(function() {
-                  if (item.new) return <div className="content-card__label">New</div>
-                  else if (item.hit) return <div className="content-card__label">Hit</div>
-                  else {
-                    return ''
-                  }
-                })()}
+              {(function () {
+                if (item.new)
+                  return <div className="content-card__label">New</div>;
+                else if (item.hit)
+                  return <div className="content-card__label">Hit</div>;
+                else {
+                  return "";
+                }
+              })()}
               <img loading="lazy" src={item.image}></img>
               <div className="content-card_description">
                 <h3>{item.title}</h3>
                 <p>{item.ingredients}</p>
                 <div className="content-card_select">
-                    <button className="button button-select" uk-toggle="target: #modal-menu">
-                      <span>{"от " + item.price + " ₽"}</span>
-                    </button>
-                  </div>
+                  <button
+                    className="button button-select"
+                    uk-toggle="target: #modal-menu"
+                  >
+                    <span>{"от " + item.price + " ₽"}</span>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -143,24 +168,29 @@ function MainContent() {
           <h2 id="saucelink">Соусы</h2>
         </div>
         <div className="content content-sauce">
-        {items.sauce.map((item) => (
+          {items.sauce.map((item) => (
             <div className="content-card" key={item.id + item.title}>
-              {(function() {
-                  if (item.new) return <div className="content-card__label">New</div>
-                  else if (item.hit) return <div className="content-card__label">Hit</div>
-                  else {
-                    return ''
-                  }
-                })()}
+              {(function () {
+                if (item.new)
+                  return <div className="content-card__label">New</div>;
+                else if (item.hit)
+                  return <div className="content-card__label">Hit</div>;
+                else {
+                  return "";
+                }
+              })()}
               <img loading="lazy" src={item.image}></img>
               <div className="content-card_description">
                 <h3>{item.title}</h3>
                 <p>{item.ingredients}</p>
                 <div className="content-card_select">
-                    <button className="button button-select" uk-toggle="target: #modal-menu">
-                      <span>{"от " + item.price + " ₽"}</span>
-                    </button>
-                  </div>
+                  <button
+                    className="button button-select"
+                    uk-toggle="target: #modal-menu"
+                  >
+                    <span>{"от " + item.price + " ₽"}</span>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -172,7 +202,7 @@ function MainContent() {
           <div className="content-card">
             <img
               loading="lazy"
-              src={require("../../img/combo-src/combo1.png").default}
+              src="img/combo-src/combo1.png"
               alt=""
             />
             <div className="content-card_description">
@@ -189,7 +219,7 @@ function MainContent() {
           <div className="content-card">
             <img
               loading="lazy"
-              src={require("../../img/combo-src/combo2.png").default}
+              src="img/combo-src/combo2.png"
               alt=""
             />
             <div className="content-card_description">
@@ -206,7 +236,7 @@ function MainContent() {
           <div className="content-card">
             <img
               loading="lazy"
-              src={require("../../img/combo-src/combo3.png").default}
+              src="img/combo-src/combo3.png"
               alt=""
             />
             <div className="content-card_description">
@@ -221,7 +251,7 @@ function MainContent() {
           <div className="content-card">
             <img
               loading="lazy"
-              src={require("../../img/combo-src/combo4.png").default}
+              src="img/combo-src/combo4.png"
               alt=""
             />
             <div className="content-card_description">
@@ -238,7 +268,7 @@ function MainContent() {
           <div className="content-card">
             <img
               loading="lazy"
-              src={require("../../img/combo-src/combo1.png").default}
+              src="img/combo-src/combo1.png"
               alt=""
             />
             <div className="content-card_description">
@@ -255,7 +285,7 @@ function MainContent() {
           <div className="content-card">
             <img
               loading="lazy"
-              src={require("../../img/combo-src/combo2.png").default}
+              src="/img/combo-src/combo2.png"
               alt=""
             />
             <div className="content-card_description">

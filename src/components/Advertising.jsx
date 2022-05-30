@@ -3,7 +3,7 @@ import React from 'react'
 function Advertising() {
   return (
     <section className="advertising" id="advertisinglink">
-            <nav uk-slider>
+            <nav uk-slider="true">
               <ul className="advertising__content uk-slider-items">
                 <li>
                   <a href="#" className="advertising__card">
