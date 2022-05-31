@@ -41,26 +41,7 @@ function Main() {
     });
   });
 
-  window.onscroll = function showHeaderSticky() {
-    if (window.innerWidth > 960) {
-      if (document.documentElement.scrollTop > 180) {
-        headerStickyLinks.style.display = "flex";
-      } else {
-        headerStickyLinks.style.display = "none";
-      }
-    }
-  };
 
-  window.onscroll = function showStickyCart() {
-    const buttonStickyCart = document.querySelector(".sticky-cart");
-    if (window.innerWidth < 960) {
-      if (document.documentElement.scrollTop > 180) {
-        buttonStickyCart.style.transform = "translateY(-80px)";
-      } else if (document.documentElement.scrollTop < 180) {
-        buttonStickyCart.style.transform = "translateY(80px)";
-      }
-    }
-  };
 }
 
 export default Main;

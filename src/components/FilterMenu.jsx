@@ -2,12 +2,11 @@ import React from 'react'
 
 const FilterMenu = () => {
   return (
-    <div id="filter-menu" uk-offcanvas="overlay:true; flip:true">
-        <div className="uk-offcanvas-bar offcanvas-bar">
+    <div id="filter-menu">
+        <div className=" offcanvas-bar">
           <button
-            className="uk-offcanvas-close"
+            className=""
             type="button"
-            uk-close
           ></button>
           <div className="offcanvas-bar__menu">
             <h2>Фильтры</h2>

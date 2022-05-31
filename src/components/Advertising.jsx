@@ -3,8 +3,8 @@ import React from 'react'
 function Advertising() {
   return (
     <section className="advertising" id="advertisinglink">
-            <nav uk-slider="true">
-              <ul className="advertising__content uk-slider-items">
+            <nav>
+              <ul className="advertising__content">
                 <li>
                   <a href="#" className="advertising__card">
                     <img

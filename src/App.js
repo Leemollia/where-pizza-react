@@ -1,3 +1,4 @@
+import React from "react";
 import FilterMenu from "./components/FilterMenu";
 import ModalMenu from "./components/ModalMenu";
 import Header from "./components/Header";
@@ -12,7 +13,7 @@ import ModalMenuBurger from "./components/ModalMenuBurger";
 import ContentAbout from "./components/ContentAbout";
 
 function App() {
-
+  
   return (
     <div>
       <FilterMenu />
@@ -34,6 +35,25 @@ function App() {
     </div>
   );
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const allButtonFilter = document.querySelectorAll(".button-filter");
+  const allButtonSelect = document.querySelectorAll(".button-select");
 
+  allButtonFilter.forEach((button) => {
+    button.setAttribute("uk-toggle", "target: #filter-menu");
+
+    button.addEventListener("click", () => {
+      button.setAttribute("uk-toggle", "target: #filter-menu");
+    });
+  });
+
+  allButtonSelect.forEach((button) => {
+    button.setAttribute("uk-toggle", "target: #modal-menu");
+
+    button.addEventListener("click", () => {
+      button.setAttribute("uk-toggle", "target: #modal-menu");
+    });
+  });
+});
 
 export default App;

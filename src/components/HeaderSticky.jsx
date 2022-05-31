@@ -1,6 +1,16 @@
 import React from 'react'
 
 function HeaderSticky() {
+  window.onscroll = function showHeaderSticky() {
+    const headerStickyLinks = document.querySelector(".sticky__links");
+    if (window.innerWidth > 960) {
+      if (document.documentElement.scrollTop > 180) {
+        headerStickyLinks.style.display = "flex";
+      } else {
+        headerStickyLinks.style.display = "none";
+      }
+    }
+  }
   return (
     <div className="header-sticky">
           <div className="container">
@@ -31,8 +41,8 @@ function HeaderSticky() {
                     alt=""
                   />
                 </a>
-                <div className="popup-other" uk-dropdown="mode:click">
-                  <ul className="uk-nav uk-dropdown-nav">
+                <div className="popup-other" >
+                  <ul className="">
                     <li>
                       <a href="#">Акции</a>
                     </li>
@@ -67,15 +77,14 @@ function HeaderSticky() {
                 </button>
               </div>
               <nav
-                className="uk-hidden@m uk-navbar uk-navbar-container"
+                className=""
                 style={{ backgroundColor: "#fff" }}
               >
-                <div className="uk-navbar-center">
+                <div className="">
                   <a
-                    className="uk-navbar-toggle"
+                    className=""
                     href="#"
                     style={{ minHeight: "30px" }}
-                    uk-toggle="target: #modal-menu-burger"
                   >
                     <img loading="lazy" src="./img/svg/Menu.svg" alt="" />
                   </a>
