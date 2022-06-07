@@ -1,13 +1,13 @@
 import React from "react";
 
-function ContentSauce({ items }) {
+function ContentSauce({ sauce }) {
   return (
     <div>
       <div className="heading">
         <h2 id="saucelink">Соусы</h2>
       </div>
       <div className="content content-sauce">
-        {items.sauce.map((item) => (
+        {sauce.map((item) => (
           <div className="content-card" key={item.id + item.title}>
             {(function () {
               if (item.new)

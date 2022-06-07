@@ -21,7 +21,7 @@ function App() {
       <Header />
       <main>
         <StickyCart />
-        <HeaderSticky />
+        {/* <HeaderSticky /> */}
         <div className="container">
           <ModalMenuBurger />
           <NavBar />

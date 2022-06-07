@@ -1,13 +1,13 @@
 import React from "react";
 
-function ContentDrinks({ items }) {
+function ContentDrinks({ drinks }) {
   return (
     <div>
       <div className="heading">
         <h2 id="drinkslink">Напитки</h2>
       </div>
       <div className="content content-drinks">
-        {items.drinks.map((item) => (
+        {drinks.map((item) => (
           <div className="content-card" key={item.id + item.title}>
             {(function () {
               if (item.new)

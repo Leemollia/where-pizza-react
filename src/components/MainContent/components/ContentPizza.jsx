@@ -1,6 +1,6 @@
 import React from "react";
 
-function ContentPizza({ items }) {
+function ContentPizza({ pizza }) {
   return (
     <div>
       <div className="heading heading-filter">
@@ -20,7 +20,7 @@ function ContentPizza({ items }) {
         </button>
       </div>
       <div className="content content-pizza">
-        {items.pizza.map((item) => (
+        {pizza.map((item) => (
           <div className="content-card" key={item.id + item.title}>
             {(function () {
               if (item.new)

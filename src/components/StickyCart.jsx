@@ -11,11 +11,17 @@ function StickyCart() {
       }
     }
   };
+
+  const [count, setCount] = React.useState([]);
+  function setCountFunc() {
+    const rand = Math.random();
+    setCount(count => [...count, rand]);
+  }
   return (
     <div className="sticky-cart">
-      <button>
+      <button onClick={setCountFunc}>
         <div>
-          <span>0</span>
+          <span>{count}</span>
         </div>
         <img loading="lazy" src={"./img/svg/Shoppingbag.svg"} alt="" />
       </button>

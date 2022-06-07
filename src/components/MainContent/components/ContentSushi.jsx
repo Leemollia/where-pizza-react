@@ -1,6 +1,6 @@
 import React from "react";
 
-function ContentSushi({items}) {
+function ContentSushi({sushi}) {
   return (
     <div>
       <div className="heading heading-filter">
@@ -11,7 +11,7 @@ function ContentSushi({items}) {
         </button>
       </div>
       <div className="content content-sushi">
-        {items.sushi.map((item) => (
+        {sushi.map((item) => (
           <div className="content-card" key={item.id + item.title}>
             {(function () {
               if (item.new)

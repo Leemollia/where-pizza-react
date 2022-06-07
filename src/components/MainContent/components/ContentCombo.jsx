@@ -1,6 +1,6 @@
 import React from "react";
 
-function ContentCombo({items}) {
+function ContentCombo({combo}) {
   return (
     <div>
       <div className="heading">
