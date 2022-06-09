@@ -18,7 +18,7 @@ function HeaderSticky() {
               <a href="#" className="logo">
                 <img
                   loading="lazy"
-                  src={require("../img/svg/Pizza.svg").default}
+                  src="../img/svg/Pizza.svg"
                   alt=""
                 />
                 <span>Куда пицца</span>

@@ -1,14 +1,12 @@
 import React from "react";
+import ButtonFilter from "../../ButtonFilter";
 
 function ContentSushi({sushi}) {
   return (
     <div>
       <div className="heading heading-filter">
         <h2 id="sushilink">Суши</h2>
-        <button className="button button-filter">
-          <img loading="lazy" src="img/svg/Filter.svg" alt="" />
-          <span>Фильтры</span>
-        </button>
+        <ButtonFilter />
       </div>
       <div className="content content-sushi">
         {sushi.map((item) => (
@@ -34,7 +32,6 @@ function ContentSushi({sushi}) {
               <div className="content-card_select">
                 <button
                   className="button button-select"
-                  uk-toggle="target: #modal-menu"
                 >
                   <span>{"от " + item.price + " ₽"}</span>
                 </button>

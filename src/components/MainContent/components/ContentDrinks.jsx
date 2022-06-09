@@ -25,7 +25,6 @@ function ContentDrinks({ drinks }) {
               <div className="content-card_select">
                 <button
                   className="button button-select"
-                  uk-toggle="target: #modal-menu"
                 >
                   <span>{"от " + item.price + " ₽"}</span>
                 </button>

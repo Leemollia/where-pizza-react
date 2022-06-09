@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import ContentCombo from "./components/ContentCombo";
-import ContentDeserts from "./components/ContentDeserts";
-import ContentDrinks from "./components/ContentDrinks";
-import ContentPizza from "./components/ContentPizza";
-import ContentSauce from "./components/ContentSauce";
-import ContentSnacks from "./components/ContentSnacks";
-import ContentSushi from "./components/ContentSushi";
-import Skeleton from "./components/Skeleton";
+import ContentCombo from "../../components/MainContent/components/ContentCombo";
+import ContentDeserts from "../../components/MainContent/components/ContentDeserts";
+import ContentDrinks from "../../components/MainContent/components/ContentDrinks";
+import ContentPizza from "../../components/MainContent/components/ContentPizza";
+import ContentSauce from "../../components/MainContent/components/ContentSauce";
+import ContentSnacks from "../../components/MainContent/components/ContentSnacks";
+import ContentSushi from "../../components/MainContent/components/ContentSushi";
+import Skeleton from "../../components/Skeleton"
 
 function MainContent() {
   const [error, setError] = useState(null);
@@ -29,8 +29,8 @@ function MainContent() {
   if (error) {
     return <div>Ошибка: {error.message}</div>;
   } else if (!isLoaded) {
-    return console.log(items), <Skeleton />
-  } else {console.log(items)
+    return <Skeleton />
+  } else {
     return (
       <section className="main-content">
         <ContentPizza {...items} />
