@@ -2,7 +2,7 @@ import React from "react";
 
 function ContentSauce({ items }) {
   return (
-    <div>
+    <>
       <div className="heading">
         <h2 id="saucelink">Соусы</h2>
       </div>
@@ -34,7 +34,7 @@ function ContentSauce({ items }) {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

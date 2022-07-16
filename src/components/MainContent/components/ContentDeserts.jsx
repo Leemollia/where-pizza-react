@@ -2,7 +2,7 @@ import React from "react";
 
 function ContentDeserts({items}) {
   return (
-    <div>
+    <>
       <div className="heading">
         <h2 id="desertslink">Десерты</h2>
       </div>
@@ -34,7 +34,7 @@ function ContentDeserts({items}) {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

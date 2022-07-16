@@ -2,7 +2,7 @@ import React from "react";
 
 function ContentCombo({items}) {
   return (
-    <div>
+    <>
       <div className="heading">
         <h2 id="combolink">Комбо</h2>
       </div>
@@ -80,7 +80,7 @@ function ContentCombo({items}) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

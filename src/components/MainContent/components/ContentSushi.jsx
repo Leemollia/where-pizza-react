@@ -2,7 +2,7 @@ import React from "react";
 
 function ContentSushi({items}) {
   return (
-    <div>
+    <>
       <div className="heading heading-filter">
         <h2 id="sushilink">Суши</h2>
         <button className="button button-filter">
@@ -43,7 +43,7 @@ function ContentSushi({items}) {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

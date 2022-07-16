@@ -2,7 +2,7 @@ import React from "react";
 
 function ContentDrinks({ items }) {
   return (
-    <div>
+    <>
       <div className="heading">
         <h2 id="drinkslink">Напитки</h2>
       </div>
@@ -34,7 +34,7 @@ function ContentDrinks({ items }) {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

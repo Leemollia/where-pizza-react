@@ -2,7 +2,7 @@ import React from "react";
 
 function ContentPizza({ items }) {
   return (
-    <div>
+    <>
       <div className="heading heading-filter">
         <h2 id="pizzalink">Пицца</h2>
         <button
@@ -47,7 +47,7 @@ function ContentPizza({ items }) {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
