@@ -35,7 +35,7 @@ function App() {
   });
 
   return (
-    <div>
+    <>
       <FilterMenu />
       <Header />
       <main>
@@ -51,7 +51,7 @@ function App() {
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
