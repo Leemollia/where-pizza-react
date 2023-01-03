@@ -13,11 +13,30 @@ import ModalMenuBurger from "./components/ModalMenuBurger";
 import ContentAbout from "./components/ContentAbout";
 
 function App() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const allButtonFilter = document.querySelectorAll(".button-filter");
+    const allButtonSelect = document.querySelectorAll(".button-select");
   
+    allButtonFilter.forEach((button) => {
+      button.setAttribute("uk-toggle", "target: #filter-menu");
+  
+      button.addEventListener("click", () => {
+        button.setAttribute("uk-toggle", "target: #filter-menu");
+      });
+    });
+  
+    allButtonSelect.forEach((button) => {
+      button.setAttribute("uk-toggle", "target: #modal-menu");
+  
+      button.addEventListener("click", () => {
+        button.setAttribute("uk-toggle", "target: #modal-menu");
+      });
+    });
+  });
+
   return (
     <div>
       <FilterMenu />
-
       <Header />
       <main>
         <StickyCart />
@@ -35,25 +54,5 @@ function App() {
     </div>
   );
 }
-document.addEventListener("DOMContentLoaded", () => {
-  const allButtonFilter = document.querySelectorAll(".button-filter");
-  const allButtonSelect = document.querySelectorAll(".button-select");
-
-  allButtonFilter.forEach((button) => {
-    button.setAttribute("uk-toggle", "target: #filter-menu");
-
-    button.addEventListener("click", () => {
-      button.setAttribute("uk-toggle", "target: #filter-menu");
-    });
-  });
-
-  allButtonSelect.forEach((button) => {
-    button.setAttribute("uk-toggle", "target: #modal-menu");
-
-    button.addEventListener("click", () => {
-      button.setAttribute("uk-toggle", "target: #modal-menu");
-    });
-  });
-});
 
 export default App;
