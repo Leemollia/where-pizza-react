@@ -9,7 +9,7 @@ function Advertising() {
                   <a href="#" className="advertising__card">
                     <img
                       loading="lazy"
-                      src={require("../img/pizza-src/tripple-pizza.svg").default}
+                      src="../img/pizza-src/tripple-pizza.svg"
                       alt=""
                     />
                     <h3>3 средние пиццы от 999 рублей</h3>
@@ -22,7 +22,7 @@ function Advertising() {
                   >
                     <img
                       loading="lazy"
-                      src={require("../img/pizza-src/pizza-box.svg").default}
+                      src="../img/pizza-src/pizza-box.svg"
                       alt=""
                     />
                     <h3>Кэшбек 10% на самовывоз (доставка)</h3>
@@ -32,7 +32,7 @@ function Advertising() {
                   <a href="#" className="advertising__card">
                     <img
                       loading="lazy"
-                      src={require("../img/pizza-src/tripple-pizza.svg").default}
+                      src="../img/pizza-src/tripple-pizza.svg"
                       alt=""
                     />
                     <h3>3 средние пиццы от 999 рублей</h3>
@@ -45,7 +45,7 @@ function Advertising() {
                   >
                     <img
                       loading="lazy"
-                      src={require("../img/pizza-src/pizza-box.svg").default}
+                      src="../img/pizza-src/pizza-box.svg"
                       alt=""
                     />
                     <h3>Кэшбек 10% на самовывоз (доставка)</h3>

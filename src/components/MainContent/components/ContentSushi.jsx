@@ -1,17 +1,15 @@
 import React from "react";
+import ButtonFilter from "../../ButtonFilter";
 
-function ContentSushi({items}) {
+function ContentSushi({sushi}) {
   return (
     <>
       <div className="heading heading-filter">
         <h2 id="sushilink">Суши</h2>
-        <button className="button button-filter">
-          <img loading="lazy" src="img/svg/Filter.svg" alt="" />
-          <span>Фильтры</span>
-        </button>
+        <ButtonFilter />
       </div>
       <div className="content content-sushi">
-        {items.sushi.map((item) => (
+        {sushi.map((item) => (
           <div className="content-card" key={item.id + item.title}>
             {(function () {
               if (item.new)
@@ -34,7 +32,6 @@ function ContentSushi({items}) {
               <div className="content-card_select">
                 <button
                   className="button button-select"
-                  uk-toggle="target: #modal-menu"
                 >
                   <span>{"от " + item.price + " ₽"}</span>
                 </button>

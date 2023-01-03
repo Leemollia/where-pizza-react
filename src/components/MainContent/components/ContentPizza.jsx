@@ -1,26 +1,15 @@
 import React from "react";
+import ButtonFilter from "../../ButtonFilter";
 
-function ContentPizza({ items }) {
+function ContentPizza({ pizza }) {
   return (
     <>
       <div className="heading heading-filter">
         <h2 id="pizzalink">Пицца</h2>
-        <button
-          className="button button-filter"
-          onClick={() =>
-            document.querySelector("#filter-menu").classList.toggle("active")
-          }
-        >
-          <img
-            loading="lazy"
-            src={require("../../../img/svg/Filter.svg").default}
-            alt=""
-          />
-          <span>Фильтры</span>
-        </button>
+        <ButtonFilter />
       </div>
       <div className="content content-pizza">
-        {items.pizza.map((item) => (
+        {pizza.map((item) => (
           <div className="content-card" key={item.id + item.title}>
             {(function () {
               if (item.new)
@@ -38,7 +27,6 @@ function ContentPizza({ items }) {
               <div className="content-card_select">
                 <button
                   className="button button-select"
-                  uk-toggle="target: #modal-menu"
                 >
                   <span>{"от " + item.price + " ₽"}</span>
                 </button>

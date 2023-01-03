@@ -1,13 +1,13 @@
 import React from "react";
 
-function ContentSnacks({items}) {
+function ContentSnacks({snacks}) {
   return (
     <>
       <div className="heading">
         <h2 id="snackslink">Закуски</h2>
       </div>
       <div className="content content-snacks">
-        {items.snacks.map((item) => (
+        {snacks.map((item) => (
           <div className="content-card" key={item.id + item.title}>
             {(function () {
               if (item.new)
@@ -25,7 +25,6 @@ function ContentSnacks({items}) {
               <div className="content-card_select">
                 <button
                   className="button button-select"
-                  uk-toggle="target: #modal-menu"
                 >
                   <span>{"от " + item.price + " ₽"}</span>
                 </button>

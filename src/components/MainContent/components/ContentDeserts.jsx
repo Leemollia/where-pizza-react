@@ -1,13 +1,13 @@
 import React from "react";
 
-function ContentDeserts({items}) {
+function ContentDeserts({deserts}) {
   return (
     <>
       <div className="heading">
         <h2 id="desertslink">Десерты</h2>
       </div>
       <div className="content content-deserts">
-        {items.deserts.map((item) => (
+        {deserts.map((item) => (
           <div className="content-card" key={item.id + item.title}>
             {(function () {
               if (item.new)
@@ -25,7 +25,6 @@ function ContentDeserts({items}) {
               <div className="content-card_select">
                 <button
                   className="button button-select"
-                  uk-toggle="target: #modal-menu"
                 >
                   <span>{"от " + item.price + " ₽"}</span>
                 </button>
