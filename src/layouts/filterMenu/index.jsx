@@ -24,13 +24,14 @@ const FilterMenu = () => {
 
   // Убираем все "активные" классы у кнопок и меняем массив на пустой
   const resetCount = () => {
-    document.querySelectorAll(".button.button-border.button-border-focus").forEach((button) => {
-      button.classList.remove("button-border-focus");
-    });
-    document.querySelector("#filter-menu").classList.toggle("active")
+    document
+      .querySelectorAll(".button.button-border.button-border-focus")
+      .forEach((button) => {
+        button.classList.remove("button-border-focus");
+      });
+    document.querySelector("#filter-menu").classList.toggle("active");
     setCount([]);
   };
-  console.log(count);
   return (
     <div id="filter-menu">
       <div className=" offcanvas-bar">

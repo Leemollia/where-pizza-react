@@ -6,7 +6,7 @@ import ContentPizza from "../../components/MainContent/components/ContentPizza";
 import ContentSauce from "../../components/MainContent/components/ContentSauce";
 import ContentSnacks from "../../components/MainContent/components/ContentSnacks";
 import ContentSushi from "../../components/MainContent/components/ContentSushi";
-import Skeleton from "../../components/Skeleton"
+import Skeleton from "../../components/Skeleton";
 
 function MainContent() {
   const [error, setError] = useState(null);
@@ -29,17 +29,17 @@ function MainContent() {
   if (error) {
     return <div>Ошибка: {error.message}</div>;
   } else if (!isLoaded) {
-    return <Skeleton />
+    return <Skeleton />;
   } else {
     return (
       <section className="main-content">
-        <ContentPizza {...items} />
-        <ContentSushi {...items} />
-        <ContentSnacks {...items} />
-        <ContentDeserts {...items} />
-        <ContentDrinks {...items} />
-        <ContentSauce {...items} />
-        <ContentCombo {...items} />
+          <ContentPizza {...items} />
+          <ContentSushi {...items} />
+          <ContentSnacks {...items} />
+          <ContentDeserts {...items} />
+          <ContentDrinks {...items} />
+          <ContentSauce {...items} />
+          <ContentCombo {...items} />
       </section>
     );
   }

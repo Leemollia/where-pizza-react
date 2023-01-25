@@ -70,7 +70,7 @@
     }
 
     .check-address__input-button {
-      min-width: 0;
+      min-width: 48px;
       margin: 0;
       &::after {
         content: url(../../img/svg/Check-address-arrow.svg);

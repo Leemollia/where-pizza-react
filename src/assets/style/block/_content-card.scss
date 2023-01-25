@@ -69,8 +69,8 @@
   /* margin-bottom: 20px; */
 }
 
-.content-card_select span {
-  color: #ff7010;
+.content-card_select .button-select span {
+  color: #fff;
   font-weight: 600;
 }
 
@@ -114,8 +114,12 @@
           .button-select {
             background: #FFEEE2;
             border-radius: 6px;
-            color: #FF7010;
+            color: #fff;
             padding: 8px 16px;
+
+            span {
+              color: #ff7010;
+            }
           }
         }
       }

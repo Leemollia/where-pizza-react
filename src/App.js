@@ -15,9 +15,8 @@ import ContentAbout from "./layouts/contentAbout";
 function App() {
   
   return (
-    <div>
+    <>
       <FilterMenu />
-
       <Header />
       <main>
         <StickyCart />
@@ -32,7 +31,7 @@ function App() {
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
