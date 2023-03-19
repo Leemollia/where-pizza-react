@@ -28,6 +28,7 @@ function App() {
           <CheckAddress />
           <MainContent />
           <ContentAbout />
+          <ModalMenu/>
         </div>
       </main>
       <Footer />

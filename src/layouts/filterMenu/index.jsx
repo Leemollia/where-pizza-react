@@ -1,8 +1,8 @@
-import React from "react";
+import {useState} from "react";
 
 const FilterMenu = () => {
   // Устанавливаем состояние пустого массива и принимаем в этот массив значение нажатой кнопки
-  const [count, setCount] = React.useState([]);
+  const [count, setCount] = useState([]);
 
   const changeCount = (button) => {
     // Получаем название кнопки
@@ -33,8 +33,8 @@ const FilterMenu = () => {
     setCount([]);
   };
   return (
-    <div id="filter-menu">
-      <div className=" offcanvas-bar">
+    <div id="filter-menu" data-uk-offcanvas="overlay:true; flip:true">
+      <div className="uk-offcanvas-bar offcanvas-bar">
         <button className="" type="button"></button>
         <div className="offcanvas-bar__menu">
           <h2>Фильтры</h2>
