@@ -1,10 +1,14 @@
 import { useGetAllCardsQuery } from "../../store/api/cardsApi.js";
+import {  } from "../../store/slice/modalCardSlice";
 
 import ProductGroup from "../../components/ProductGroup";
 import Skeleton from "../../components/Skeleton";
 import ModalCard from "../../components/ModalCard";
+import { useSelector } from "react-redux";
 
 function MainContent() {
+  const modalData = useSelector((state) => state.modalCard.cardData);
+  console.log(modalData);
   const {data = [], isError, isLoading, error} = useGetAllCardsQuery();
 
   if (isError) {

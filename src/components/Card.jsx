@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux";
-import UIkit from "uikit";
-import { showChooseModal } from "../store/slice/cardsSlice";
+import { showModal, hideModal } from "../store/slice/modalCardSlice";
 
 function Card({ data }) {
   const dispatch = useDispatch();
@@ -15,8 +14,7 @@ function Card({ data }) {
   };
 
   const openModal = () => {
-    dispatch(showChooseModal({1: 123}))
-    // UIkit.modal("#modal-menu").show();
+    dispatch(showModal({1: 123}))
   };
 
   return (

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import UIkit from "uikit";
 
 const cardsSlice = createSlice({
     name: 'cards',
