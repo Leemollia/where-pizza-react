@@ -13,6 +13,7 @@ const cardModalSlice = createSlice({
         },
 
         hideModal(state, action) {
+            state.cardData = {};
             state.isOpen = false;
         }
     },

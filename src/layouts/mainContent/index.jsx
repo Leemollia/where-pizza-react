@@ -1,14 +1,14 @@
 import { useGetAllCardsQuery } from "../../store/api/cardsApi.js";
-import {  } from "../../store/slice/modalCardSlice";
 
 import ProductGroup from "../../components/ProductGroup";
 import Skeleton from "../../components/Skeleton";
 import ModalCard from "../../components/ModalCard";
 import { useSelector } from "react-redux";
+import Portal from "../../components/Portal.js";
 
 function MainContent() {
-  const modalData = useSelector((state) => state.modalCard.cardData);
-  console.log(modalData);
+  const {isOpen, cardData} = useSelector((state) => state.modalCard);
+  console.log(isOpen);
   const {data = [], isError, isLoading, error} = useGetAllCardsQuery();
 
   if (isError) {
@@ -25,8 +25,7 @@ function MainContent() {
             items={category[1]}
           />
         ))}
-        
-        <ModalCard></ModalCard>
+        {isOpen && <Portal children={<ModalCard data={cardData} isOpen={isOpen}></ModalCard>} className={'modal-menu'}/>}
       </section>
     );
   }

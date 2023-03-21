@@ -14,7 +14,7 @@ function Card({ data }) {
   };
 
   const openModal = () => {
-    dispatch(showModal({1: 123}))
+    dispatch(showModal({cardData: data}))
   };
 
   return (
