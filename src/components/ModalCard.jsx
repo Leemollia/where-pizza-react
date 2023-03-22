@@ -1,7 +1,6 @@
 const ModalCard = ({ data, isOpen }) => {
   console.log(data);
   return (
-    <div id="modal-menu" className="uk-open">
       <div className="modal-menu uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <div className="modal__line"></div>
         <button
@@ -75,7 +74,6 @@ const ModalCard = ({ data, isOpen }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

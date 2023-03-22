@@ -25,7 +25,7 @@ function MainContent() {
             items={category[1]}
           />
         ))}
-        {isOpen && <Portal children={<ModalCard data={cardData} isOpen={isOpen}></ModalCard>} className={'modal-menu'}/>}
+        {isOpen && <Portal children={<ModalCard data={cardData} isOpen={isOpen}></ModalCard>}/>}
       </section>
     );
   }

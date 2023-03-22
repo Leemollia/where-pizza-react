@@ -1,12 +1,13 @@
-#modal-menu {
-.modal-menu {
-  position: relative;
-  display: flex;
-  gap: 13px;
-  border-radius: 24px;
-  width: 100%;
+.modal {
+  &-menu {
+    position: relative;
+    display: flex;
+    gap: 13px;
+    border-radius: 24px;
+    width: 100%;
+  }
 
-  .modal__line {
+  &__line {
     display: none;
     position: absolute;
     top: -22px;
@@ -18,7 +19,7 @@
     border-radius: 100px;
   }
 
-  .modal__leftpanel {
+  &__leftpanel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,184 +31,356 @@
     }
   }
 
-  .modal__rightpanel {
+  &__rightpanel {
     display: flex;
     flex-direction: column;
     gap: 16px;
 
-    .rightpanel__header {
-      display: flex;
-      gap: 11px;
-
-      img:last-child {
-        margin-left: auto;
-        width: 24px;
-        height: 24px;
-      }
-
-      h4 {
-        margin: 0;
-        font-weight: 600;
-      }
-    }
-
-    .rightpanel__ingredients {
-      display: flex;
-      gap: 20px;
-
-      .ingredient__block {
+    .rightpanel {
+      &__header {
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        max-width: 105px;
-        height: fit-content;
-        text-align: center;
+        gap: 11px;
 
-        img {
-          width: 40px;
-          height: 40px;
+        img:last-child {
+          margin-left: auto;
+          width: 24px;
+          height: 24px;
         }
 
-        button {
-          border-radius: 12px;
-          padding: 30px;
-          position: relative;
-        }
-      }
-    }
-
-    .rightpanel__dough {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      gap: 16px;
-
-      .dough__type {
-        display: flex;
-
-        button {
-          width: 50%;
+        h4 {
+          margin: 0;
+          font-weight: 600;
         }
       }
 
-      .dough__size {
-        display: flex;
-
-        button {
-          width: 33.333%;
-        }
-      }
-    }
-
-    .rightpanel__topping {
-      .topping__list {
+      &__ingredients {
         display: flex;
         gap: 20px;
 
+        .ingredient__block {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          max-width: 105px;
+          height: fit-content;
+          text-align: center;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+
+          button {
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+          }
+        }
+      }
+
+      &__dough {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+
+        .dough {
+          &__type {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            button {
+              width: 50%;
+            }
+          }
+
+          &__size {
+            display: flex;
+
+            button {
+              width: 33.333%;
+            }
+          }
+        }
+      }
+
+      &__topping {
+        .topping__list {
+          display: flex;
+          gap: 20px;
+
+          button {
+            position: relative;
+            padding: 30px;
+          }
+        }
+      }
+
+      &__price {
+        display: flex;
+        align-items: flex-end;
+        gap: 12px;
+
+        .price__total {
+          display: flex;
+          gap: 13px;
+          align-items: flex-end;
+
+          .price__price {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: #ff7010;
+          }
+
+          .price__gramms {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+
         button {
-          position: relative;
-          padding: 30px;
+          margin-left: auto;
         }
       }
     }
+  }
 
-    .rightpanel__price {
-      display: flex;
-      align-items: flex-end;
-      gap: 12px;
+  .button-modal-select {
+    background: #fff;
+    border: 1px solid #f9f9f9;
 
-      .price__total {
-        display: flex;
-        gap: 13px;
-        align-items: flex-end;
+    &:hover {
+      border: 1px solid #ff7010;
+    }
+  }
 
-        .price__price {
-          font-weight: 600;
-          font-size: 20px;
-          line-height: 28px;
-          color: #ff7010;
-        }
+  .border-select {
+    border: 1px solid #ff7010;
 
-        .price__gramms {
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 18px;
-        }
-      }
-
-      button {
-        margin-left: auto;
-      }
+    &::after {
+      content: url(../../img/svg/Done.svg);
+      position: absolute;
+      top: 8px;
+      right: 8px;
     }
   }
 }
 
-.button-modal-select {
-  background: #fff;
-  border: 1px solid #f9f9f9;
-}
+/*#modal-menu {
+  .modal-menu {
+    position: relative;
+    display: flex;
+    gap: 13px;
+    border-radius: 24px;
+    width: 100%;
 
-.button-modal-select:hover {
-  border: 1px solid #ff7010;
-}
+    .modal__line {
+      display: none;
+      position: absolute;
+      top: -22px;
+      left: 25%;
+      width: 50%;
+      height: 5px;
+      background: #f5f5f5;
+      opacity: 0.6;
+      border-radius: 100px;
+    }
 
-.border-select {
-  border: 1px solid #ff7010;
-}
+    .modal__leftpanel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      flex: 1 0 auto;
 
-.border-select::after {
-  content: url(../../img/svg/Done.svg);
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-}
+      img {
+        padding: 3rem;
+      }
+    }
+
+    .modal__rightpanel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .rightpanel__header {
+        display: flex;
+        gap: 11px;
+
+        img:last-child {
+          margin-left: auto;
+          width: 24px;
+          height: 24px;
+        }
+
+        h4 {
+          margin: 0;
+          font-weight: 600;
+        }
+      }
+
+      .rightpanel__ingredients {
+        display: flex;
+        gap: 20px;
+
+        .ingredient__block {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          max-width: 105px;
+          height: fit-content;
+          text-align: center;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+
+          button {
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+          }
+        }
+      }
+
+      .rightpanel__dough {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+
+        .dough__type {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          button {
+            width: 50%;
+          }
+        }
+
+        .dough__size {
+          display: flex;
+
+          button {
+            width: 33.333%;
+          }
+        }
+      }
+
+      .rightpanel__topping {
+        .topping__list {
+          display: flex;
+          gap: 20px;
+
+          button {
+            position: relative;
+            padding: 30px;
+          }
+        }
+      }
+
+      .rightpanel__price {
+        display: flex;
+        align-items: flex-end;
+        gap: 12px;
+
+        .price__total {
+          display: flex;
+          gap: 13px;
+          align-items: flex-end;
+
+          .price__price {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: #ff7010;
+          }
+
+          .price__gramms {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+
+        button {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .button-modal-select {
+    background: #fff;
+    border: 1px solid #f9f9f9;
+  }
+
+  .button-modal-select:hover {
+    border: 1px solid #ff7010;
+  }
+
+  .border-select {
+    border: 1px solid #ff7010;
+  }
+
+  .border-select::after {
+    content: url(../../img/svg/Done.svg);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+}*/
 @media screen and (max-width: $tabletWidth) {
   #modal-menu {
     padding: 20% 0 0 0;
+  }
 
-    .modal__line {
-      display: block;
+  .modal__line {
+    display: block;
+  }
+
+  .modal__leftpanel {
+    width: 100%;
+  }
+
+  .modal-menu {
+    flex-direction: column;
+    border-radius: 16px 16px 0px 0px;
+
+    .uk-modal-close-default {
+      display: none;
     }
+  }
+  
+  .modal__rightpanel {
+    .rightpanel__header {
+      align-items: flex-end;
 
-    .modal-menu {
-      flex-direction: column;
-      border-radius: 16px 16px 0px 0px;
-
-      .uk-modal-close-default {
-        display: none;
+      h4 {
+        font-size: 18px;
+        line-height: 22px;
       }
-      .modal__leftpanel {
-        width: 100%;
+    }
+    .rightpanel__ingredients {
+      overflow: scroll;
+      img {
+        max-width: none;
       }
-      .modal__rightpanel {
-        .rightpanel__header {
-          align-items: flex-end;
-
-          h4 {
-            font-size: 18px;
-            line-height: 22px;
-          }
-        }
-        .rightpanel__ingredients {
-          overflow: scroll;
-          img {
-            max-width: none;
-          }
-        }
-        .rightpanel__topping {
-          overflow: scroll;
-          img {
-            max-width: none;
-          }
-        }
-        .rightpanel__price {
-          .price__total {
-            flex-direction: column;
-            gap: 0;
-            align-items: flex-start;
-          }
-        }
+    }
+    .rightpanel__topping {
+      overflow: scroll;
+      img {
+        max-width: none;
+      }
+    }
+    .rightpanel__price {
+      .price__total {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
       }
     }
   }
