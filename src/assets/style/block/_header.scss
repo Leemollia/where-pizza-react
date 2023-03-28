@@ -61,19 +61,24 @@ header {
     padding: 0;
 
     .sticky__links {
-      display: none;
+      // display: none;
+      display: flex;
+      flex-wrap: wrap;
 
       > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-decoration: none;
         padding: 0 16px;
         text-decoration: none;
         color: rgb(0, 0, 0);
 
-        &:nth-last-child(2) {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-        }
+        // &:nth-last-child(2) {
+        //   display: flex;
+        //   align-items: center;
+        //   gap: 5px;
+        // }
       }
     }
 

@@ -1,4 +1,5 @@
 import React, { Children } from "react";
+
 import FilterMenu from "./layouts/filterMenu";
 import Header from "./layouts/header";
 import StickyCart from "./layouts/stickyCart";
@@ -13,7 +14,7 @@ function App() {
       <FilterMenu />
       <Header />
       <main>
-        {/* <HeaderSticky /> */}
+        <HeaderSticky />
         <div className="container">
           <Outlet />
         </div>
