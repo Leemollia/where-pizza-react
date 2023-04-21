@@ -7,7 +7,7 @@ function Card({ data }) {
   const RenderLabel = ({ labelHit, labelNew }) => {
     return (
       <>
-        { labelHit && <div className="content-card__label">New</div>}
+        {labelHit && <div className="content-card__label">New</div>}
         {labelNew && <div className="content-card__label">ХИТ</div>}
       </>
     );
