@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
+
 import UIkit from "uikit";
-import { Card } from "./Card";
+
+import CardItem from "./CardItem";
+
+import Button from "../UI/Button";
 
 function ProductGroup({ category, items }) {
   const [haveFilter, setHaveFilter] = useState(false);
@@ -15,25 +19,24 @@ function ProductGroup({ category, items }) {
     return s.charAt(0).toUpperCase() + s.slice(1);
   }
 
+  function buttonFilterHandler() {
+    return UIkit.offcanvas("#filter-menu").show();
+  }
+
   return (
     <>
       <div className="heading heading-filter">
-        <h2 id="sushilink">{capitalize(category)}</h2>
+        <h2>{capitalize(category)}</h2>
         {haveFilter && (
-          <button
-            className="button button-filter"
-            onClick={() =>
-              UIkit.offcanvas('#filter-menu').show()
-            }
-          >
+          <Button className="button-filter" onClick={buttonFilterHandler}>
             <img loading="lazy" src="img/svg/Filter.svg" alt="" />
             <span>Фильтры</span>
-          </button>
+          </Button>
         )}
       </div>
       <div className="content">
         {items.map((item) => (
-          <Card key={item.id} data={item} />
+          <CardItem key={item.id} data={item} />
         ))}
       </div>
     </>

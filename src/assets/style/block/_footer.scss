@@ -1,8 +1,8 @@
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  border-top: 1px solid $borderColor;
+  border-bottom: 1px solid $borderColor;
   padding: 32px 0;
   gap: 2rem;
 
@@ -71,7 +71,8 @@
     flex-direction: column;
     gap: 24px;
     .footer__column {
-      h4 {}
+      h4 {
+      }
       .footer__refs {
         a {
           margin: 8px 0;

@@ -8,11 +8,12 @@
       display: flex;
       gap: 30px;
       justify-content: space-between;
+      padding: 0;
 
       .advertising__card {
         display: grid;
         grid-template-rows: 75% 25%;
-        background: #ff7010;
+        background: $orangeColor;
         border-radius: 12px;
         width: 300px;
         height: 343px;
@@ -22,7 +23,7 @@
         h3 {
           padding: 20px;
           padding-right: 40px;
-          color: #fff;
+          color: $whiteColor;
           align-self: end;
           margin: 0;
         }

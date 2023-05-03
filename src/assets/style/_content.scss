@@ -1,0 +1,30 @@
+::selection {
+  background: $orangeColor;
+  color: $whiteColor;
+  text-shadow: none;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: none;
+  vertical-align: middle;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 30px;
+  justify-content: space-between;
+
+  @media screen and (max-width: $mobileWidth) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

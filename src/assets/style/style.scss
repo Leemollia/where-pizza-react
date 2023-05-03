@@ -1,3 +1,11 @@
+/* Переменные и миксины */
+@import './variables';
+@import './mixins';
+
+/* Общие стили */
+@import './content';
+
+/* Стили блоков */
 @import './block/_main';
 @import './block/_fonts';
 @import './block/_header';

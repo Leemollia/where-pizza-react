@@ -1,17 +1,16 @@
-import React from "react";
+import Button from "../UI/Button";
 
-function buttonFilter() {
+function ButtonFilter() {
+  const onClickHander = (event) => {
+    document.querySelector("#filter-menu").classList.toggle("active")
+  }
+
   return (
-    <button
-      className="button button-filter"
-      onClick={() =>
-        document.querySelector("#filter-menu").classList.toggle("active")
-      }
-    >
+    <Button className={'button-filter'} onClick={onClickHander}>
       <img loading="lazy" src="img/svg/Filter.svg" alt="" />
       <span>Фильтры</span>
-    </button>
+    </Button>
   );
 }
 
-export default buttonFilter;
+export default ButtonFilter;

@@ -56,11 +56,11 @@ h4 {
 }
 
 *::-webkit-scrollbar-track {
-  background: #fff;
+  background: $whiteColor;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #ff7010;
+  background: $orangeColor;
   border-radius: 15px;
 }
 
@@ -103,7 +103,7 @@ h4 {
 .button {
   padding: 8px 16px;
   color: white;
-  background: #ff7010;
+  background: $orangeColor;
   border: 1px solid transparent;
   border-radius: 6px;
   font-size: 16px;
@@ -111,18 +111,18 @@ h4 {
 }
 
 .button-border {
-  background: #fff;
+  background: $whiteColor;
   color: #000;
   border: 1px solid #f9f9f9;
 
   &-focus {
-    background: #ff7010;
-    color: #fff;
-    border: 1px solid #ff7010;
+    background: $orangeColor;
+    color: $whiteColor;
+    border: 1px solid $orangeColor;
   }
 
   &:hover {
-    border: 1px solid #ff7010;
+    border: 1px solid $orangeColor;
   }
 }
 
@@ -136,7 +136,7 @@ h4 {
 
   button {
     position: relative;
-    background: #ff7010;
+    background: $orangeColor;
     box-shadow: 0px 2px 8px rgba(25, 25, 25, 0.2);
     border-radius: 50%;
     border: none;
@@ -149,12 +149,12 @@ h4 {
       right: -3.57%;
       top: -3.57%;
       bottom: 67.86%;
-      background: #ffffff;
-      border: 1px solid #ff7010;
+      background: $whiteColor;
+      border: 1px solid $orangeColor;
       border-radius: 50%;
       font-size: 12px;
       line-height: 16px;
-      color: #ff7010;
+      color: $orangeColor;
 
       span {
         position: relative;

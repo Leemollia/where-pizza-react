@@ -1,5 +1,5 @@
 const ModalCard = ({ data, isOpen }) => {
-  console.log(data);
+
   return (
       <div className="modal-menu uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <div className="modal__line"></div>
@@ -19,7 +19,7 @@ const ModalCard = ({ data, isOpen }) => {
             <img loading="lazy" src="./img/svg/Info.svg" alt="" />
           </div>
           <div className="rightpanel__ingredients">
-            {data.ingredients.join(', ')}
+            {data.ingredients ? data.ingredients.join(', ') : ''}
           </div>
           <div className="rightpanel__dough">
             <div className="dough__type">

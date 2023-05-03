@@ -1,16 +1,15 @@
 import { useSelector } from "react-redux";
-import { useGetAllCardsQuery } from "../../store/api/cardsApi.js";
+import { useGetAllCardsQuery } from "../../../store/api/cardsApi.js";
 
-import ProductGroup from "../../components/ProductGroup";
-import Skeleton from "../../components/Skeleton";
-import ModalCard from "../../components/ModalCard";
+import ProductGroup from '../../../components/ProductGroup.jsx'
+import Skeleton from "../../../components/Skeleton";
+import ModalCard from "../../../components/ModalCard";
 
-import Portal from "../../components/Portal.js";
+import Portal from "../../../components/Portal.js";
 
 function MainContent() {
-  console.log('render')
   const {isOpen, cardData} = useSelector((state) => state.modalCard);
-  console.log(isOpen);
+
   const {data = [], isError, isLoading, error} = useGetAllCardsQuery();
 
   if (isError) {

@@ -1,29 +1,35 @@
-import React, { Children } from "react";
+import { Provider } from 'react-redux';
+import { store } from './store/index.js';
 
-import FilterMenu from "./layouts/filterMenu";
-import Header from "./layouts/header";
-import StickyCart from "./layouts/stickyCart";
-import HeaderSticky from "./layouts/headerSticky";
-import Footer from "./layouts/footer";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import { Outlet } from "react-router-dom";
+import PageLayout from "./pages/PageLayout/PageLayout";
+import MainPage from "./pages/MainPage/MainPage";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+
+
+const router = createBrowserRouter([
+  {
+    element: <PageLayout />,
+    children: [
+      {
+        path: '/',
+        element: <MainPage />
+      },
+      {
+        path: '*',
+        element: <ErrorPage/>
+      }
+    ]
+  },
+]);
 
 function App() {
   return (
-    <>
-      <FilterMenu />
-      <Header />
-      <main>
-        <HeaderSticky />
-        <div className="container">
-          <Outlet />
-        </div>
-      </main>
-      <StickyCart />
-      <Footer />
-    </>
-  );
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  )
 }
-
 
 export default App;

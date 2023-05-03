@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+
 import { createPortal } from "react-dom";
-import { useDispatch } from "react-redux";
+
 import { modal } from "uikit";
+
+import { useDispatch } from "react-redux";
 import { hideModal } from "../store/slice/modalCardSlice";
 
 const Portal = ({ children, className, el = 'div' }) => {

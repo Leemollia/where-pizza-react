@@ -1,6 +1,6 @@
 header {
-  background: #fff;
-  border-bottom: 1px solid #f0f0f0;
+  background: $whiteColor;
+  border-bottom: 1px solid $borderColor;
 
   .header-info {
     font-family: "Inter", sans-serif;
@@ -9,7 +9,7 @@ header {
     align-items: center;
     padding: 11px 0;
     font-size: 14px;
-    background: #fff;
+    background: $whiteColor;
 
     &__leftpanel {
       ul {
@@ -49,8 +49,8 @@ header {
   top: 0;
   z-index: 2;
   padding: 11px 0;
-  background: #ffffff;
-  border-bottom: 1px solid #f0f0f0;
+  background: $whiteColor;
+  border-bottom: 1px solid $borderColor;
 
   &__nav-bar {
     display: flex;
@@ -118,7 +118,7 @@ header {
   align-items: center;
   padding: 8px 16px;
   color: white;
-  background: #ff7010;
+  background: $orangeColor;
   border: none;
   border-radius: 4px;
   font-size: 16px;
@@ -129,8 +129,8 @@ header {
 }
 
 .popup-other {
-  background: #ffffff;
-  border: 1px solid #f0f0f0;
+  background: $whiteColor;
+  border: 1px solid $borderColor;
   box-sizing: border-box;
   box-shadow: 0px 2px 8px rgba(25, 25, 25, 0.1);
   border-radius: 12px;

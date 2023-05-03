@@ -130,7 +130,7 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 28px;
-            color: #ff7010;
+            color: $orangeColor;
           }
 
           .price__gramms {
@@ -148,16 +148,16 @@
   }
 
   .button-modal-select {
-    background: #fff;
+    background: $whiteColor;
     border: 1px solid #f9f9f9;
 
     &:hover {
-      border: 1px solid #ff7010;
+      border: 1px solid $orangeColor;
     }
   }
 
   .border-select {
-    border: 1px solid #ff7010;
+    border: 1px solid $orangeColor;
 
     &::after {
       content: url(../../img/svg/Done.svg);
@@ -296,7 +296,7 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 28px;
-            color: #ff7010;
+            color: $orangeColor;
           }
 
           .price__gramms {
@@ -314,16 +314,16 @@
   }
 
   .button-modal-select {
-    background: #fff;
+    background: $whiteColor;
     border: 1px solid #f9f9f9;
   }
 
   .button-modal-select:hover {
-    border: 1px solid #ff7010;
+    border: 1px solid $orangeColor;
   }
 
   .border-select {
-    border: 1px solid #ff7010;
+    border: 1px solid $orangeColor;
   }
 
   .border-select::after {
