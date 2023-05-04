@@ -2,12 +2,15 @@
 @import './variables';
 @import './mixins';
 
+/* Шрифты */
+@import './fonts';
+
 /* Общие стили */
 @import './content';
 
+
 /* Стили блоков */
 @import './block/_main';
-@import './block/_fonts';
 @import './block/_header';
 @import './block/_footer';
 @import './block/_advertising';

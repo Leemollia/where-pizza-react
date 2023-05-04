@@ -149,7 +149,7 @@
 
   .button-modal-select {
     background: $whiteColor;
-    border: 1px solid #f9f9f9;
+    border: 1px solid $borderColor;
 
     &:hover {
       border: 1px solid $orangeColor;
@@ -160,7 +160,7 @@
     border: 1px solid $orangeColor;
 
     &::after {
-      content: url(../../img/svg/Done.svg);
+      /*content: url(../../img/svg/Done.svg);*/
       position: absolute;
       top: 8px;
       right: 8px;

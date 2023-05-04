@@ -32,7 +32,7 @@
       }
 
       &::placeholder {
-        background: url(../../img/svg/Location.svg) no-repeat;
+        /*background: url(../../img/svg/Location.svg) no-repeat;*/
         background-size: 16px;
         text-indent: 18px;
       }
@@ -73,7 +73,7 @@
       min-width: 48px;
       margin: 0;
       &::after {
-        content: url(../../img/svg/Check-address-arrow.svg);
+        /*content: url(../../img/svg/Check-address-arrow.svg);*/
       }
     }
   }

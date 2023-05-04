@@ -1,30 +1,39 @@
-import React from "react";
+import { useState, useEffect, useRef } from "react";
+
+import Button from "../../../UI/Button";
 
 function StickyCart() {
-  window.onscroll = function showStickyCart() {
-    const buttonStickyCart = document.querySelector(".sticky-cart");
-    if (window.innerWidth < 960) {
-      if (document.documentElement.scrollTop > 180) {
-        buttonStickyCart.style.transform = "translateY(-80px)";
-      } else if (document.documentElement.scrollTop < 180) {
-        buttonStickyCart.style.transform = "translateY(80px)";
-      }
-    }
-  };
+  const [count, setCount] = useState([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const stickyCartEl = useRef();
 
-  const [count, setCount] = React.useState([]);
-  function setCountFunc() {
-    const rand = Math.random();
-    setCount(count => [...count, rand]);
+  useEffect(() => {
+    const setIsVisibleHandler = () => {
+      if (window.innerWidth > 960) return;
+      if (document.documentElement.scrollTop > 180) return setIsVisible(true);
+      setIsVisible(false);
+    };
+
+    window.addEventListener("scroll", setIsVisibleHandler);
+
+    return () => {
+      window.removeEventListener("scroll", setIsVisibleHandler);
+    };
+  }, []);
+
+  function setCountFn() {
+    setCount((count) => count++);
   }
+
   return (
-    <div className="sticky-cart">
-      <button onClick={setCountFunc}>
-        <div>
-          <span>{count}</span>
-        </div>
+    <div
+      className={`sticky-cart ${isVisible ? "" : "hidden"}`}
+      ref={stickyCartEl}
+    >
+      <Button onClick={setCountFn}>
+        <span>{count}</span>
         <img loading="lazy" src={"./img/svg/Shoppingbag.svg"} alt="" />
-      </button>
+      </Button>
     </div>
   );
 }
