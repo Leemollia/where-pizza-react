@@ -1,14 +1,15 @@
 import React from 'react'
 
-function Footer() {
+import MainLogo from '../../../components/MainLogo';
+
+const Footer = () => {
   return (
     <footer>
         <div className="container">
           <div className="footer__wrapper">
             <div className="footer__column">
               <div className="logo logo--footer">
-                <img loading="lazy" src="./img/svg/Pizza.svg" alt="" />
-                <span>Куда пицца</span>
+                <MainLogo />
               </div>
             </div>
             <div className="footer__column">

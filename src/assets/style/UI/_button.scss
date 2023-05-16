@@ -1,0 +1,54 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  @include font-inter();
+  font-size: 16px;
+
+  padding: 8px 16px;
+
+  color: white;
+  background: $orangeColor;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  transition: 0.3s ease-in-out;
+  transition-property: opacity, background-color, color, border-color;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $whiteColor;
+    color: $blackColor;
+    border-color: $orangeColor;
+  }
+
+  &--border {
+    color: #000;
+    background: $whiteColor;
+
+    border: 1px solid #f9f9f9;
+
+    &-focus {
+      color: $whiteColor;
+      background: $orangeColor;
+
+      border: 1px solid $orangeColor;
+    }
+
+    &:hover {
+      border: 1px solid $orangeColor;
+    }
+  }
+
+  &--burger {
+    background-color: $whiteColor;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

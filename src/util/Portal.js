@@ -9,8 +9,8 @@ import { hideModal } from "../store/slice/modalCardSlice";
 
 const Portal = ({ children, className, el = 'div' }) => {
     const dispatch = useDispatch();
-    const [container] = useState(document.createElement(el))
-
+    const container = document.createElement(el);
+    
     if (className) container.classList.add(className)
     container.id = 'modal-menu';
 

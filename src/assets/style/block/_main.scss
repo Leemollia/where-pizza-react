@@ -100,32 +100,6 @@ h4 {
   }
 }
 
-.button {
-  padding: 8px 16px;
-  color: white;
-  background: $orangeColor;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.button-border {
-  background: $whiteColor;
-  color: #000;
-  border: 1px solid #f9f9f9;
-
-  &-focus {
-    background: $orangeColor;
-    color: $whiteColor;
-    border: 1px solid $orangeColor;
-  }
-
-  &:hover {
-    border: 1px solid $orangeColor;
-  }
-}
-
 .sticky-cart {
   display: none;
   position: fixed;

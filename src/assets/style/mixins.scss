@@ -1,0 +1,8 @@
+@mixin font-inter() {
+    font-family: "Inter", sans-serif;
+}
+
+@mixin transition($transition-properties, $transition-time: 0.3s ) {
+    transition-property: $transition-properties;
+    transition-duration: $transition-time;
+}

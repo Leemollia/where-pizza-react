@@ -23,17 +23,17 @@ const ModalCard = ({ data, isOpen }) => {
           </div>
           <div className="rightpanel__dough">
             <div className="dough__type">
-              <button className="button button-border button-border-focus">
+              <button className="button button--border button--border-focus">
                 Традиционное
               </button>
-              <button className="button button-border">Тонкое</button>
+              <button className="button button--border">Тонкое</button>
             </div>
             <div className="dough__size">
-              <button className="button button-border button-border-focus">
+              <button className="button button--border button--border-focus">
                 20 см
               </button>
-              <button className="button button-border">28 см</button>
-              <button className="button button-border">33 см</button>
+              <button className="button button--border">28 см</button>
+              <button className="button button--border">33 см</button>
             </div>
           </div>
           <div className="rightpanel__topping">
@@ -70,7 +70,7 @@ const ModalCard = ({ data, isOpen }) => {
               <div className="price__price">Итого: 379 ₽</div>
               <div className="price__gramms">410 г</div>
             </div>
-            <button className="button button-border">Добавить</button>
+            <button className="button button--border">Добавить</button>
           </div>
         </div>
       </div>

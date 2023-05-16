@@ -5,9 +5,11 @@
 /* Шрифты */
 @import './fonts';
 
+/* Стили UI */
+@import './UI/export';
+
 /* Общие стили */
 @import './content';
-
 
 /* Стили блоков */
 @import './block/_main';

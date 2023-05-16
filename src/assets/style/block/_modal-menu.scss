@@ -160,7 +160,7 @@
     border: 1px solid $orangeColor;
 
     &::after {
-      /*content: url(../../img/svg/Done.svg);*/
+      content: url(../../img/svg/Done.svg);
       position: absolute;
       top: 8px;
       right: 8px;

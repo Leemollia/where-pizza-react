@@ -3,9 +3,6 @@ import React from "react";
 function NavBar() {
   return (
     <div className="nav-bar-wrapper">
-      <a href="/">
-        <img loading="lazy" src="./img/svg/Pizza.svg" alt="" />
-      </a>
       <nav className="nav-bar" uk-slider="finite: true">
         <ul className="nav-bar__list uk-slider-items">
           <li>

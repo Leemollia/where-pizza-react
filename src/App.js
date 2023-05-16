@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Provider } from 'react-redux';
 import { store } from './store/index.js';
 
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: '*',
-        element: <ErrorPage/>
+        element: <ErrorPage />
       }
     ]
   },
@@ -26,9 +28,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+    <React.StrictMode>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </React.StrictMode>
   )
 }
 
