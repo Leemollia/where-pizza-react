@@ -65,17 +65,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .button-select span {
-      color: $whiteColor;
-      font-weight: 600;
-    }
   }
 }
 
-.button-select {
-  padding: 13px 32px;
-}
 
 @media screen and (max-width: $tabletWidth) {
   .content-card {

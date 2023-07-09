@@ -2,28 +2,26 @@ import { useEffect, useState } from "react";
 
 import { createPortal } from "react-dom";
 
-import { modal } from "uikit";
-
 import { useDispatch } from "react-redux";
 import { hideModal } from "../store/slice/modalCardSlice";
 
-const Portal = ({ children, className, el = 'div' }) => {
+const Portal = ({ children, className = '', el = 'div' }) => {
     const dispatch = useDispatch();
     const container = document.createElement(el);
     
-    if (className) container.classList.add(className)
+    container.classList.add(className)
     container.id = 'modal-menu';
 
     useEffect(() => {
         document.body.appendChild(container)
-        modal(container).show();
+        // modal(container).show();
 
-        container.addEventListener('hidden', () => {
-            dispatch(hideModal());
-        })
+        // container.addEventListener('hidden', () => {
+        //     dispatch(hideModal());
+        // })
 
         return () => {
-            modal(container).$destroy();
+            // modal(container).$destroy();
             document.body.removeChild(container)
         }
     }, [])

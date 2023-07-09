@@ -1,180 +1,130 @@
-import {useState} from "react";
+import { useState } from "react";
+import Button from "../../../UI/Button";
 
 const FilterMenu = () => {
-  // Устанавливаем состояние пустого массива и принимаем в этот массив значение нажатой кнопки
-  const [count, setCount] = useState([]);
+  const categories = {
+    alias: {
+      title: "Общие",
+      items: [
+        "Хит",
+        "Новинка",
+        "С мясом",
+        "Вегетарианская",
+        "С курицей",
+        "Без лука",
+        "С грибами",
+        "С морепродуктами",
+        "Барбекю",
+      ],
+    },
+    cheese: {
+      title: "Сыр",
+      items: [
+        "Реджанито",
+        "Моцарелла",
+        "Чеддер",
+        "С голубой плесенью",
+        "Смесь итальянских сыров",
+        "Мягкий молодой сыр",
+      ],
+    },
+    meat: {
+      title: "Мясо",
+      items: [
+        "Пепперони",
+        "Свинина",
+        "Ветчина",
+        "Бекон",
+        "Чоризо",
+        "Колбаски",
+        "Куриная грудка",
+      ],
+    },
+    components: {
+      title: "Компоненты",
+      items: [
+        "Креветка",
+        "Ананасы",
+        "Шампиньоны",
+        "Лук",
+        "Перец халапеньо",
+        "Орегано",
+        "Зеленый перец",
+        "Томаты",
+        "Чеснок",
+        "Красный перец",
+        "Оливки",
+        "Маслины",
+        "Клубника",
+        "Смесь итальянских трав",
+      ],
+    },
+  };
 
-  const changeCount = (button) => {
-    // Получаем название кнопки
+  const [filteredIngredients, setFilteredIngredients] = useState([]);
+
+  const changeFilteredIngredients = (button) => {
     const inner = button.currentTarget.innerText;
-    // Добавляем класс "активной" кнопки
     button.currentTarget.classList.toggle("button--border-focus");
 
-    // Делаем проверку
-    // Если данное значение уже есть в массиве, то удаляем его и возвращаем массив без этого элемента
-    if (count.includes(inner)) {
-      let numb = count.findIndex((i) => i === inner);
-      count.splice(numb, 1);
-      return setCount([...count]);
+    if (filteredIngredients.includes(inner)) {
+      let numb = filteredIngredients.findIndex((i) => i === inner);
+      filteredIngredients.splice(numb, 1);
+      return setFilteredIngredients([...filteredIngredients]);
     } else {
-      // Иначе добавляем значение в массив
-      setCount([...count, inner]);
+      setFilteredIngredients([...filteredIngredients, inner]);
     }
   };
 
-  // Убираем все "активные" классы у кнопок и меняем массив на пустой
-  const resetCount = () => {
+  const resetFilteredIngredients = () => {
     document
       .querySelectorAll(".button.button--border.button--border-focus")
       .forEach((button) => {
         button.classList.remove("button--border-focus");
       });
     document.querySelector("#filter-menu").classList.toggle("active");
-    setCount([]);
+    setFilteredIngredients([]);
   };
+
   return (
-    <div id="filter-menu" data-uk-offcanvas="overlay:true; flip:true">
-      <div className="uk-offcanvas-bar offcanvas-bar">
-        <button className="" type="button"></button>
-        <div className="offcanvas-bar__menu">
-          <h2>Фильтры</h2>
-          <p>Общее</p>
-          <ul className="offcanvas-bar__items">
-            <button onClick={changeCount} className="button button--border">
-              Хит
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Новинка
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              С мясом
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Вегетарианская
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              С курицей
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Без лука
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              С грибами
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              С морепродуктами
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Барбекю
-            </button>
-          </ul>
-          <p>Сыр</p>
-          <ul className="offcanvas-bar__items">
-            <button onClick={changeCount} className="button button--border">
-              Реджанито
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Моцарелла
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Чеддер
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              С голубой плесенью
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Смесь итальянских сыров
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Без лука
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Мягкий молодой сыр
-            </button>
-          </ul>
-          <p>Мясо</p>
-          <ul className="offcanvas-bar__items">
-            <button onClick={changeCount} className="button button--border">
-              Пепперони
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Свинина
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Ветчина
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Бекон
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Чоризо
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Колбаски
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Куриная грудка
-            </button>
-          </ul>
-          <p>Компонент</p>
-          <ul className="offcanvas-bar__items">
-            <button onClick={changeCount} className="button button--border">
-              Креветка
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Ананасы
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Шампиньоны
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Лук
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Перец халапеньо
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Орегано
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Зеленый перец
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Томаты
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Чеснок
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Красный перец
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Оливки
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Маслины
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Клубника
-            </button>
-            <button onClick={changeCount} className="button button--border">
-              Смесь итальянских трав
-            </button>
-          </ul>
-        </div>
-        <div className="offcanvas-bar__footer">
-          <button onClick={resetCount} className="button button--border">
-            Сбросить
-          </button>
-          <button
-            onClick={() =>
-              document.querySelector("#filter-menu").classList.toggle("active")
-            }
-            className="button button--border-focus"
-          >
-            Применить
-          </button>
-        </div>
+    <div id="filter-menu">
+      <div className="offcanvas-bar__menu">
+        <h2>Фильтры</h2>
+        {Object.values(categories).map((category, index) => {
+          const { title, items } = category;
+
+          return (
+            <div key={index}>
+              <p>{title}</p>
+              <div className="offcanvas-bar__items">
+                {items.map((item, index) => {
+                  return (
+                    <Button
+                      key={index}
+                      onClick={changeFilteredIngredients}
+                      className="button--border"
+                    >
+                      {item}
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="offcanvas-bar__footer">
+        <Button onClick={resetFilteredIngredients} className="button--border">
+          Сбросить
+        </Button>
+        <Button
+          onClick={() =>
+            document.querySelector("#filter-menu").classList.toggle("active")
+          }
+          className="button--border-focus"
+        >
+          Применить {filteredIngredients.length > 0 && `(${filteredIngredients.length})`}
+        </Button>
       </div>
     </div>
   );

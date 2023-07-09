@@ -37,6 +37,14 @@
       background: $orangeColor;
 
       border: 1px solid $orangeColor;
+
+      &:hover,
+      &:active {
+        color: $whiteColor;
+        background: $orangeColor;
+
+        border: 1px solid $orangeColor;
+      }
     }
 
     &:hover {
@@ -49,6 +57,37 @@
 
     &:hover {
       background-color: transparent;
+    }
+  }
+
+  &--select {
+    padding: 13px 32px;
+    background-color: $orangeColor;
+
+    &:hover {
+      background-color: $whiteColor;
+      color: $orangeColor;
+    }
+  }
+
+  &-modal {
+    &-close {
+      position: absolute;
+      top: 0;
+      right: -7%;
+      background: none;
+      color: initial;
+      border: none;
+
+      path {
+        fill: $whiteColor;
+      }
+
+      &:hover {
+        color: inherit;
+        background: none;
+        border: none;
+      }
     }
   }
 }

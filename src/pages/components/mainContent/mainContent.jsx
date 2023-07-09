@@ -17,8 +17,8 @@ function MainContent() {
 
   if (isError) {
     return <div>Ошибка: {error}</div>;
-  } else {
-    // } else if (isLoading) {
+  // } else {
+    } else if (isLoading) {
     return (
       <section className="main-content">
         {Array(4)
@@ -29,24 +29,24 @@ function MainContent() {
       </section>
     );
   }
-  //  else {
-  //   return (
-  //     <section className="main-content">
-  //       {Object.entries(data).map((category) => (
-  //         <ProductGroup
-  //           key={category}
-  //           category={category[0]}
-  //           items={category[1]}
-  //         />
-  //       ))}
-  //       {isOpen && (
-  //         <Portal
-  //           children={<ModalCard data={cardData} isOpen={isOpen}></ModalCard>}
-  //         />
-  //       )}
-  //     </section>
-  //   );
-  // }
+   else {
+    return (
+      <section className="main-content">
+        {Object.entries(data).map((category) => (
+          <ProductGroup
+            key={category}
+            category={category[0]}
+            items={category[1]}
+          />
+        ))}
+        {isOpen && (
+          <Portal
+            children={<ModalCard data={cardData} isOpen={isOpen}></ModalCard>}
+          />
+        )}
+      </section>
+    );
+  }
 }
 
 export default MainContent;

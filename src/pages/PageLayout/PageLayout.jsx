@@ -8,7 +8,6 @@ import { Outlet } from "react-router-dom";
 function PageLayout () {
   return (
     <>
-      <FilterMenu />
       <Header />
       <main>
         <div className="container">
