@@ -1,38 +1,22 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { showModal, hideModal } from "../store/slice/modalCardSlice";
+import { useState, memo } from "react";
 
-import { Drawer, Modal } from "@mui/material";
+import { Drawer, Modal, Dialog } from "@mui/material";
+import { styled } from "@mui/system";
 
 import Button from "../UI/Button";
 import ModalMenu from "../pages/components/modalMenu/modalMenu";
 import useIsMobile from "../hooks/useIsMobile";
 
-function CardItem({ data }) {
+const ModalMobile = styled(Drawer)(() => ({
+  "& .MuiDrawer-paper": {
+    top: "10%",
+    borderRadius: "1rem 1rem 0 0",
+  },
+}));
+
+const CardItem = memo(({ data }) => {
   const isMobile = useIsMobile();
   const [openModal, setOpenModal] = useState(false);
-  const dispatch = useDispatch();
-
-  const Label = ({ labelHit, labelNew }) => {
-    return (
-      <>
-        {labelHit && <div className="content-card__label">New</div>}
-        {labelNew && <div className="content-card__label">ХИТ</div>}
-      </>
-    );
-  };
-
-  const Title = () => {
-    return data.title ? <h3>{data.title}</h3> : "";
-  };
-
-  const Description = () => {
-    return data.description ? <p>{data.description}</p> : "";
-  };
-
-  const Ingredients = () => {
-    return data.ingredients ? <p>{data.ingredients.join(", ")}</p> : "";
-  };
 
   const toggleModal = () => {
     setOpenModal((prev) => !prev);
@@ -41,40 +25,48 @@ function CardItem({ data }) {
   return (
     <div className="content-card">
       <div className="content-card__image">
-        {<Label labelNew={data.new} labelHit={data.hit} />}
-        <img loading="lazy" src={data.image} alt={data.title} />
+        {data.hit && <div className="content-card__label">New</div>}
+        {data.new && <div className="content-card__label">ХИТ</div>}
+        <img src={data.image} alt={data.title} />
       </div>
       <div className="content-card__description">
-        {<Title />}
-        {<Description />}
-        {<Ingredients />}
+        {data.title ? <h3>{data.title}</h3> : ""}
+        {data.description ? <p>{data.description}</p> : ""}
+        {data.ingredients ? <p>{data.ingredients.join(", ")}</p> : ""}
         <div className="content-card__select">
           <Button onClick={toggleModal} className={"button--select"}>
             <span>{"от " + data.price + " ₽"}</span>
           </Button>
           {isMobile ? (
-            <Drawer open={openModal} anchor="bottom" onClose={toggleModal}>
+            <ModalMobile open={openModal} anchor="bottom" onClose={toggleModal}>
               <ModalMenu data={data} />
-            </Drawer>
+            </ModalMobile>
           ) : (
-            <Modal open={openModal} onClose={toggleModal}>
+            <Dialog
+              open={openModal}
+              onClose={toggleModal}
+              PaperProps={{
+                sx: {
+                  margin: "70px",
+                  overflow: "visible",
+                  maxWidth: "1070px",
+                  borderRadius: "1rem",
+                },
+              }}
+              sx={{
+                backdropFilter: "blur(5px)",
+              }}
+            >
               <ModalMenu
-                slots={{  
-                  backdrop: {
-                    sx: {
-                      backdropFilter: "blur(5px)"
-                    }
-                  },
-                }}
                 data={data}
                 closeHandler={toggleModal}
               />
-            </Modal>
+            </Dialog>
           )}
         </div>
       </div>
     </div>
   );
-}
+});
 
 export default CardItem;

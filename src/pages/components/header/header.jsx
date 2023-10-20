@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import BurgerMenuButton from "../../../components/BurgerMenuButton";
+import BurgerMenuButton from "../../../components/buttons/BurgerMenuButton";
 import MainLogo from "../../../components/MainLogo";
 
 import Button from "../../../UI/Button";
@@ -8,15 +8,18 @@ import Button from "../../../UI/Button";
 import useIsMobile from "../../../hooks/useIsMobile";
 
 import { ReactComponent as ShoppingBagSvg } from "../../../assets/img/svg/Shoppingbag.svg";
+import { Drawer } from "@mui/material";
 
 const Header = ({ hideHeaderDown = true }) => {
+  const headerRef = useRef();
   const headerUpElement = useRef();
   const isMobile = useIsMobile();
   const [offsetTopHeight, setOffsetTopHeight] = useState("0px");
+  const [openBurger, setOpenBurger] = useState(false);
 
   useEffect(() => {
     const setDataHeightHandler = () => {
-      const height = headerUpElement.current.offsetHeight;
+      const height = headerRef.current.querySelector('.preheader').offsetHeight;
       document.documentElement.style.setProperty(
         "--header-offset-top",
         offsetTopHeight
@@ -92,7 +95,24 @@ const Header = ({ hideHeaderDown = true }) => {
         <div className="header__panel">
           <div className="header__block">
             {isMobile ? (
-              <BurgerMenuButton />
+              <>
+                <BurgerMenuButton onClick={() => setOpenBurger(true)} />
+                <Drawer
+                  hideBackdrop={true}
+                  anchor="top"
+                  open={openBurger}
+                  onClose={() => setOpenBurger(false)}
+                  PaperProps={{
+                    sx: {
+                      top: headerRef.current ? `${headerRef.current.offsetHeight}px` : '10px',
+                    },
+                  }}
+                >
+                  <div className="1">1</div>
+                  <div className="1">2</div>
+                  <div className="1">3</div>
+                </Drawer>
+              </>
             ) : (
               <Button>
                 <ShoppingBagSvg />
@@ -106,13 +126,10 @@ const Header = ({ hideHeaderDown = true }) => {
   }
 
   return (
-    <header className="header">
-      <div className="container">
+    <header className="header" ref={headerRef}>
+      <div className="container preheader">
         <HeaderUp />
       </div>
-
-      <hr />
-
       <div className="container">
         <HeaderDown />
       </div>

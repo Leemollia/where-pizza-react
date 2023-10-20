@@ -1,405 +1,561 @@
 {
-    "pizza": [
-      {
-        "id": 0,
-        "title": "Президентская",
-        "description": "",
-        "ingredients": ["грибной соус", "курица", "моцарелла", "орегано", "томаты", "шампиньоны"],
-        "image": "https://pizzaricca.ru/items/55.png",
-        "price": 710,
-        "new": false,
-        "hit": true
-      },
-      {
-        "id": 1,
-        "title": "Том Ям",
-        "description": "",
-        "ingredients": ["ананасы", "креветки", "моцарелла", "соус том ям", "томаты", "чернила каракатицы", "шампиньоны"],
-        "image": "https://pizzaricca.ru/items/47.png",
-        "price": 415,
-        "new": true,
-        "hit": false
-      },
-      {
-        "id": 2,
-        "title": "Русская",
-        "description": "",
-        "ingredients": ["белый соус", "ветчина", "грудинка", "курица", "маринованные огурцы", "моцарелла", "томаты", "укроп"],
-        "image": "https://pizzaricca.ru/items/6.png",
-        "price": 464,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 3,
-        "title": "Пепперони",
-        "description": "",
-        "ingredients": ["базилик", "болгарский перец", "красный соус", "маслины", "моцарелла", "острый перец", "пепперони (нарезанная соломкой)", "томаты"],
-        "image": "https://pizzaricca.ru/items/11.png",
-        "price": 480,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 4,
-        "title": "Нептун",
-        "description": "",
-        "ingredients": ["лосось", "лук", "моцарелла", "сливочный сыр", "тобико", "тунцовый соус", "укроп"],
-        "image": "https://pizzaricca.ru/items/15.png",
-        "price": 317,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 5,
-        "title": "Мясная Царская",
-        "description": "",
-        "ingredients": ["грудинка", "красный соус", "моцарелла", "охотничьи колбаски", "сырокопченая колбаса", "томаты", "укроп", "шампиньоны"],
-        "image": "https://pizzaricca.ru/items/29.png",
-        "price": 610,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 6,
-        "title": "Мясная Студенческая",
-        "description": "",
-        "ingredients": ["ветчина", "грудинка", "красный соус", "курица", "лук", "моцарелла", "укроп"],
-        "image": "https://pizzaricca.ru/items/10.png",
-        "price": 470,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 7,
-        "title": "Кремлевская",
-        "description": "",
-        "ingredients": ["ветчина", "грибной соус", "моцарелла", "орегано", "томаты", "шампиньоны"],
-        "image": "https://pizzaricca.ru/items/17.png",
-        "price": 510,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 8,
-        "title": "Домашняя",
-        "ingredients": ["белый соус", "ветчина", "курица", "моцарелла", "салями с/к", "томаты", "укроп"],
-        "image": "https://pizzaricca.ru/items/3.png",
-        "price": 520,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 9,
-        "title": "Мега",
-        "description": "",
-        "ingredients": ["базилик", "белый соус", "болгарский перец", "грудинка", "моцарелла", "охотничьи колбаски", "салями с/к", "томаты", "шампиньоны"],
-        "image": "https://pizzaricca.ru/items/5.png",
-        "price": 882,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 10,
-        "title": "Дары Моря",
-        "description": "",
-        "ingredients": ["лосось", "лук", "маслины", "моцарелла", "тигровые креветки", "томаты", "тунцовый соус", "укроп"],
-        "image": "https://pizzaricca.ru/items/14.png",
-        "price": 610,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 11,
-        "title": "Малевич",
-        "description": "",
-        "ingredients": ["ананасы", "белый соус", "ветчина", "моцарелла", "сладкий чили", "тигровые креветки", "чернила каракатицы"],
-        "image": "https://pizzaricca.ru/items/34.png",
-        "price": 620,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 12,
-        "title": "Куриная",
-        "description": "",
-        "ingredients": ["белый соус", "курица", "лук", "моцарелла", "орегано", "томаты"],
-        "image": "https://pizzaricca.ru/items/4.png",
-        "price": 470,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 13,
-        "title": "Грибная",
-        "description": "",
-        "ingredients": ["грибной соус", "моцарелла", "орегано", "томаты", "шампиньоны"],
-        "image": "https://pizzaricca.ru/items/16.png",
-        "price": 520,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 14,
-        "title": "Гавайская",
-        "description": "",
-        "ingredients": ["ананасы", "белый соус", "курица в соусе терияки", "маслины", "моцарелла", "орегано"],
-        "image": "https://pizzaricca.ru/items/1.png",
-        "price": 660,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 15,
-        "title": "Блэк Бургер",
-        "description": "",
-        "ingredients": ["базилик", "говяжий фарш", "лук", "маринованные огурцы", "моцарелла", "острый перец", "салями с/к", "соус гриль", "томаты", "чеддер", "чернила каракатицы"],
-        "image": "https://pizzaricca.ru/items/51.png",
-        "price": 570,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 16,
-        "title": "Баварская",
-        "description": "",
-        "ingredients": ["болгарский перец", "ветчина", "красный соус", "лук", "маслины", "моцарелла", "охотничьи колбаски", "салями с/к", "укроп"],
-        "image": "https://pizzaricca.ru/items/7.png",
-        "price": 480,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 17,
-        "title": "4 Сыра",
-        "description": "",
-        "ingredients": ["базилик", "дорблю", "моцарелла", "пармезан", "сливочный сыр", "сырный соус"],
-        "image": "https://pizzaricca.ru/items/12.png",
-        "price": 796,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 18,
-        "title": "Эндорфин",
-        "description": "",
-        "ingredients": ["болгарский перец", "грудинка", "курица маринованная", "моцарелла", "редис дайкон", "соус азиатский", "соус манго-маракуйя", "черный кунжут"],
-        "image": "https://pizzaricca.ru/items/55.png",
-        "price": 610,
-        "new": false,
-        "hit": false
-      }
-    ],
-
-    "sushi": [
-      {
-        "id": 0,
-        "title": "Филадельфия кранч",
-        "description": "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чипсы",
-        "ingredients": "",
-        "image": "./img/sushu-src/fhiladelphia-crunch.jpg",
-        "price": 475,
-        "new": false,
-        "hit": true
-      },
-      {
-        "id": 1,
-        "title": "Филадельфия крем-брюле",
-        "description": "Сливочный сыр, семга татаки с тростниковым сахаром, соус унаги",
-        "ingredients": "",
-        "image": "./img/sushu-src/pfiladilphia-crembrule.jpg",
-        "price": 395,
-        "new": true,
-        "hit": false
-      },
-      {
-        "id": 2,
-        "title": "Супер Филадельфия",
-        "description": "Действительно много семги, сливочный сыр, огурец, рис, нори.",
-        "ingredients": "",
-        "image": "./img/sushu-src/super-philadilphia.jpg",
-        "price": 425,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 3,
-        "title": "Тигр мама",
-        "description": "Тигровая креветка, огурец, авокадо, соус Айоли, рис, икра тобико",
-        "ingredients": "",
-        "image": "./img/sushu-src/tigr-mama.jpg",
-        "price": 525,
-        "new": false,
-        "hit": false
-      }
-    ],
-    "snacks": [
-      {
-        "id": 0,
-        "title": "Картофель из печи",
-        "description": "Ароматный запеченный картофель с итальянскими травами",
-        "ingredients": "",
-        "image": "./img/snacks-src/kartofel-fri.png",
-        "price": 199,
-        "new": false,
-        "hit": true
-      },
-      {
-        "id": 1,
-        "title": "Куриные крылья",
-        "description": "Куриные крылышки со специями и ароматом копчения.",
-        "ingredients": "",
-        "image": "./img/snacks-src/krilya.png",
-        "price": 499,
-        "new": false,
-        "hit": false
+  "pizza": [
+    {
+      "id": 0,
+      "title": "Президентская",
+      "description": "",
+      "ingredients": [
+        "грибной соус",
+        "курица",
+        "моцарелла",
+        "орегано",
+        "томаты",
+        "шампиньоны"
+      ],
+      "image": "https://pizzaricca.ru/items/55.png",
+      "price": 710,
+      "new": false,
+      "hit": true
     },
     {
-        "id": 2,
-        "title": "Куриные кусочки",
-        "description": "Сочное куриное филе в хрустящей панировке.",
-        "ingredients": "",
-        "image": "./img/snacks-src/naggets.png",
-        "price": 499,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 3,
-        "title": "Додстер",
-        "description": "Легендарная горячая закуска с цыпленком, томатами, моцарела...",
-        "ingredients": "",
-        "image": "./img/snacks-src/roll.png",
-        "price": 199,
-        "new": false,
-        "hit": false
-      }
-    ],
-    "deserts": [
-      {
-        "id": 0,
-        "title": "Узелки сладкие",
-        "description": "Мягкие булочки с корицей и сахарной пудрой",
-        "ingredients": "",
-        "image": "./img/deserts-src/keks.png",
-        "price": 149,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 1,
-        "title": "Рогалики с клубникой",
-        "description": "Сладкие рогалики с клубникой, сыром кремчиз и сахарной пудрой",
-        "ingredients": "",
-        "image": "./img/deserts-src/blini.png",
-        "price": 199,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 2,
-        "title": "Сырники",
-        "description": "Нежные сырники из печи с соусом на выбор",
-        "ingredients": "",
-        "image": "./img/deserts-src/oladya.png",
-        "price": 159,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 3,
-        "title": "Магнат Шоколадный трюфель",
-        "description": "Шоколадное мороженое с кусочками трюфеля",
-        "ingredients": "",
-        "image": "./img/deserts-src/morojenoe.png",
-        "price": 139,
-        "new": false,
-        "hit": false
-      }
-    ],
-    "drinks": [
-      {
-        "id": 0,
-        "title": "Adrenaline Gamefuel",
-        "description": "",
-        "ingredients": "",
-        "image": "./img/drinks-src/adrenalin.png",
-        "price": 199,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 1,
-        "title": "Pepsi MAX",
-        "description": "",
-        "ingredients": "",
-        "image": "./img/drinks-src/pepsi-max.png",
-        "price": 99,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 2,
-        "title": "Pepsi",
-        "description": "",
-        "ingredients": "",
-        "image": "./img/drinks-src/pepsi.png",
-        "price": 99,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 3,
-        "title": "Pepsi Дикая вишня",
-        "description": "",
-        "ingredients": "",
-        "image": "./img/drinks-src/pepsi-cherry.png",
-        "price": 99,
-        "new": false,
-        "hit": false
-      }
-    ],
-    "sauce": [
-      {
-        "id": 0,
-        "title": "Сырный",
-        "description": "",
-        "ingredients": "",
-        "image": "./img/sauce-src/sirniy.png",
-        "price": 49,
-        "new": true,
-        "hit": false
-      },
-      {
-        "id": 1,
-        "title": "Кисло-сладкий",
-        "description": "",
-        "ingredients": "",
-        "image": "./img/sauce-src/kislo-sladkiy.png",
-        "price": 49,
-        "new": false,
-        "hit": true
-      },
-      {
-        "id": 2,
-        "title": "Майонез",
-        "description": "",
-        "ingredients": "",
-        "image": "./img/sauce-src/mayonez.png",
-        "price": 49,
-        "new": false,
-        "hit": false
-      },
-      {
-        "id": 3,
-        "title": "Варенье",
-        "description": "",
-        "ingredients": "",
-        "image": "./img/sauce-src/varenie.png",
-        "price": 49,
-        "new": false,
-        "hit": false
-      }
-    ]
-  }
-  
+      "id": 1,
+      "title": "Том Ям",
+      "description": "",
+      "ingredients": [
+        "ананасы",
+        "креветки",
+        "моцарелла",
+        "соус том ям",
+        "томаты",
+        "чернила каракатицы",
+        "шампиньоны"
+      ],
+      "image": "https://pizzaricca.ru/items/47.png",
+      "price": 415,
+      "new": true,
+      "hit": false
+    },
+    {
+      "id": 2,
+      "title": "Русская",
+      "description": "",
+      "ingredients": [
+        "белый соус",
+        "ветчина",
+        "грудинка",
+        "курица",
+        "маринованные огурцы",
+        "моцарелла",
+        "томаты",
+        "укроп"
+      ],
+      "image": "https://pizzaricca.ru/items/6.png",
+      "price": 464,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 3,
+      "title": "Пепперони",
+      "description": "",
+      "ingredients": [
+        "базилик",
+        "болгарский перец",
+        "красный соус",
+        "маслины",
+        "моцарелла",
+        "острый перец",
+        "пепперони (нарезанная соломкой)",
+        "томаты"
+      ],
+      "image": "https://pizzaricca.ru/items/11.png",
+      "price": 480,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 4,
+      "title": "Нептун",
+      "description": "",
+      "ingredients": [
+        "лосось",
+        "лук",
+        "моцарелла",
+        "сливочный сыр",
+        "тобико",
+        "тунцовый соус",
+        "укроп"
+      ],
+      "image": "https://pizzaricca.ru/items/15.png",
+      "price": 317,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 5,
+      "title": "Мясная Царская",
+      "description": "",
+      "ingredients": [
+        "грудинка",
+        "красный соус",
+        "моцарелла",
+        "охотничьи колбаски",
+        "сырокопченая колбаса",
+        "томаты",
+        "укроп",
+        "шампиньоны"
+      ],
+      "image": "https://pizzaricca.ru/items/29.png",
+      "price": 610,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 6,
+      "title": "Мясная Студенческая",
+      "description": "",
+      "ingredients": [
+        "ветчина",
+        "грудинка",
+        "красный соус",
+        "курица",
+        "лук",
+        "моцарелла",
+        "укроп"
+      ],
+      "image": "https://pizzaricca.ru/items/10.png",
+      "price": 470,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 7,
+      "title": "Кремлевская",
+      "description": "",
+      "ingredients": [
+        "ветчина",
+        "грибной соус",
+        "моцарелла",
+        "орегано",
+        "томаты",
+        "шампиньоны"
+      ],
+      "image": "https://pizzaricca.ru/items/17.png",
+      "price": 510,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 8,
+      "title": "Домашняя",
+      "ingredients": [
+        "белый соус",
+        "ветчина",
+        "курица",
+        "моцарелла",
+        "салями с/к",
+        "томаты",
+        "укроп"
+      ],
+      "image": "https://pizzaricca.ru/items/3.png",
+      "price": 520,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 9,
+      "title": "Мега",
+      "description": "",
+      "ingredients": [
+        "базилик",
+        "белый соус",
+        "болгарский перец",
+        "грудинка",
+        "моцарелла",
+        "охотничьи колбаски",
+        "салями с/к",
+        "томаты",
+        "шампиньоны"
+      ],
+      "image": "https://pizzaricca.ru/items/5.png",
+      "price": 882,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 10,
+      "title": "Дары Моря",
+      "description": "",
+      "ingredients": [
+        "лосось",
+        "лук",
+        "маслины",
+        "моцарелла",
+        "тигровые креветки",
+        "томаты",
+        "тунцовый соус",
+        "укроп"
+      ],
+      "image": "https://pizzaricca.ru/items/14.png",
+      "price": 610,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 11,
+      "title": "Малевич",
+      "description": "",
+      "ingredients": [
+        "ананасы",
+        "белый соус",
+        "ветчина",
+        "моцарелла",
+        "сладкий чили",
+        "тигровые креветки",
+        "чернила каракатицы"
+      ],
+      "image": "https://pizzaricca.ru/items/34.png",
+      "price": 620,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 12,
+      "title": "Куриная",
+      "description": "",
+      "ingredients": [
+        "белый соус",
+        "курица",
+        "лук",
+        "моцарелла",
+        "орегано",
+        "томаты"
+      ],
+      "image": "https://pizzaricca.ru/items/4.png",
+      "price": 470,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 13,
+      "title": "Грибная",
+      "description": "",
+      "ingredients": [
+        "грибной соус",
+        "моцарелла",
+        "орегано",
+        "томаты",
+        "шампиньоны"
+      ],
+      "image": "https://pizzaricca.ru/items/16.png",
+      "price": 520,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 14,
+      "title": "Гавайская",
+      "description": "",
+      "ingredients": [
+        "ананасы",
+        "белый соус",
+        "курица в соусе терияки",
+        "маслины",
+        "моцарелла",
+        "орегано"
+      ],
+      "image": "https://pizzaricca.ru/items/1.png",
+      "price": 660,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 15,
+      "title": "Блэк Бургер",
+      "description": "",
+      "ingredients": [
+        "базилик",
+        "говяжий фарш",
+        "лук",
+        "маринованные огурцы",
+        "моцарелла",
+        "острый перец",
+        "салями с/к",
+        "соус гриль",
+        "томаты",
+        "чеддер",
+        "чернила каракатицы"
+      ],
+      "image": "https://pizzaricca.ru/items/51.png",
+      "price": 570,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 16,
+      "title": "Баварская",
+      "description": "",
+      "ingredients": [
+        "болгарский перец",
+        "ветчина",
+        "красный соус",
+        "лук",
+        "маслины",
+        "моцарелла",
+        "охотничьи колбаски",
+        "салями с/к",
+        "укроп"
+      ],
+      "image": "https://pizzaricca.ru/items/7.png",
+      "price": 480,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 17,
+      "title": "4 Сыра",
+      "description": "",
+      "ingredients": [
+        "базилик",
+        "дорблю",
+        "моцарелла",
+        "пармезан",
+        "сливочный сыр",
+        "сырный соус"
+      ],
+      "image": "https://pizzaricca.ru/items/12.png",
+      "price": 796,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 18,
+      "title": "Эндорфин",
+      "description": "",
+      "ingredients": [
+        "болгарский перец",
+        "грудинка",
+        "курица маринованная",
+        "моцарелла",
+        "редис дайкон",
+        "соус азиатский",
+        "соус манго-маракуйя",
+        "черный кунжут"
+      ],
+      "image": "https://pizzaricca.ru/items/55.png",
+      "price": 610,
+      "new": false,
+      "hit": false
+    }
+  ],
+  "sushi": [
+    {
+      "id": 0,
+      "title": "Филадельфия кранч",
+      "description": "Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чипсы",
+      "ingredients": "",
+      "image": "./img/sushu-src/fhiladelphia-crunch.jpg",
+      "price": 475,
+      "new": false,
+      "hit": true
+    },
+    {
+      "id": 1,
+      "title": "Филадельфия крем-брюле",
+      "description": "Сливочный сыр, семга татаки с тростниковым сахаром, соус унаги",
+      "ingredients": "",
+      "image": "./img/sushu-src/pfiladilphia-crembrule.jpg",
+      "price": 395,
+      "new": true,
+      "hit": false
+    },
+    {
+      "id": 2,
+      "title": "Супер Филадельфия",
+      "description": "Действительно много семги, сливочный сыр, огурец, рис, нори.",
+      "ingredients": "",
+      "image": "./img/sushu-src/super-philadilphia.jpg",
+      "price": 425,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 3,
+      "title": "Тигр мама",
+      "description": "Тигровая креветка, огурец, авокадо, соус Айоли, рис, икра тобико",
+      "ingredients": "",
+      "image": "./img/sushu-src/tigr-mama.jpg",
+      "price": 525,
+      "new": false,
+      "hit": false
+    }
+  ],
+  "snacks": [
+    {
+      "id": 0,
+      "title": "Картофель из печи",
+      "description": "Ароматный запеченный картофель с итальянскими травами",
+      "ingredients": "",
+      "image": "./img/snacks-src/kartofel-fri.png",
+      "price": 199,
+      "new": false,
+      "hit": true
+    },
+    {
+      "id": 1,
+      "title": "Куриные крылья",
+      "description": "Куриные крылышки со специями и ароматом копчения.",
+      "ingredients": "",
+      "image": "./img/snacks-src/krilya.png",
+      "price": 499,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 2,
+      "title": "Куриные кусочки",
+      "description": "Сочное куриное филе в хрустящей панировке.",
+      "ingredients": "",
+      "image": "./img/snacks-src/naggets.png",
+      "price": 499,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 3,
+      "title": "Додстер",
+      "description": "Легендарная горячая закуска с цыпленком, томатами, моцарела...",
+      "ingredients": "",
+      "image": "./img/snacks-src/roll.png",
+      "price": 199,
+      "new": false,
+      "hit": false
+    }
+  ],
+  "deserts": [
+    {
+      "id": 0,
+      "title": "Узелки сладкие",
+      "description": "Мягкие булочки с корицей и сахарной пудрой",
+      "ingredients": "",
+      "image": "./img/deserts-src/keks.png",
+      "price": 149,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 1,
+      "title": "Рогалики с клубникой",
+      "description": "Сладкие рогалики с клубникой, сыром кремчиз и сахарной пудрой",
+      "ingredients": "",
+      "image": "./img/deserts-src/blini.png",
+      "price": 199,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 2,
+      "title": "Сырники",
+      "description": "Нежные сырники из печи с соусом на выбор",
+      "ingredients": "",
+      "image": "./img/deserts-src/oladya.png",
+      "price": 159,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 3,
+      "title": "Магнат Шоколадный трюфель",
+      "description": "Шоколадное мороженое с кусочками трюфеля",
+      "ingredients": "",
+      "image": "./img/deserts-src/morojenoe.png",
+      "price": 139,
+      "new": false,
+      "hit": false
+    }
+  ],
+  "drinks": [
+    {
+      "id": 0,
+      "title": "Adrenaline Gamefuel",
+      "description": "",
+      "ingredients": "",
+      "image": "./img/drinks-src/adrenalin.png",
+      "price": 199,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 1,
+      "title": "Pepsi MAX",
+      "description": "",
+      "ingredients": "",
+      "image": "./img/drinks-src/pepsi-max.png",
+      "price": 99,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 2,
+      "title": "Pepsi",
+      "description": "",
+      "ingredients": "",
+      "image": "./img/drinks-src/pepsi.png",
+      "price": 99,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 3,
+      "title": "Pepsi Дикая вишня",
+      "description": "",
+      "ingredients": "",
+      "image": "./img/drinks-src/pepsi-cherry.png",
+      "price": 99,
+      "new": false,
+      "hit": false
+    }
+  ],
+  "sauce": [
+    {
+      "id": 0,
+      "title": "Сырный",
+      "description": "",
+      "ingredients": "",
+      "image": "./img/sauce-src/sirniy.png",
+      "price": 49,
+      "new": true,
+      "hit": false
+    },
+    {
+      "id": 1,
+      "title": "Кисло-сладкий",
+      "description": "",
+      "ingredients": "",
+      "image": "./img/sauce-src/kislo-sladkiy.png",
+      "price": 49,
+      "new": false,
+      "hit": true
+    },
+    {
+      "id": 2,
+      "title": "Майонез",
+      "description": "",
+      "ingredients": "",
+      "image": "./img/sauce-src/mayonez.png",
+      "price": 49,
+      "new": false,
+      "hit": false
+    },
+    {
+      "id": 3,
+      "title": "Варенье",
+      "description": "",
+      "ingredients": "",
+      "image": "./img/sauce-src/varenie.png",
+      "price": 49,
+      "new": false,
+      "hit": false
+    }
+  ]
+}

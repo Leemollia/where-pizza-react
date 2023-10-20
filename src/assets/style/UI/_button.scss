@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 8px;
 
-  @include font-inter();
+  @include font-sf-pro-text();
   font-size: 16px;
 
   padding: 8px 16px;
@@ -52,6 +52,24 @@
     }
   }
 
+  &--no-border {
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: none;
+    }
+  }
+
+  &--no-bg {
+    color: $blackColor;
+    background-color: transparent;
+
+    &:hover {
+      color: $blackColor;
+      background-color: transparent;
+    }
+  }
+
   &--burger {
     background-color: $whiteColor;
 
@@ -74,7 +92,7 @@
     &-close {
       position: absolute;
       top: 0;
-      right: -7%;
+      right: -4rem;
       background: none;
       color: initial;
       border: none;

@@ -1,0 +1,37 @@
+.buttons-group {
+    display: flex;
+    width: 100%;
+    border: 1px solid $borderColor;
+    border-radius: 0.375rem;
+
+    button {
+        /*border-right-color: $borderColor;
+        border-left-color: $borderColor;
+        border-radius: 0;*/
+        border-color: transparent;
+        width: inherit;
+
+        &:hover {
+            border-color: $orangeColor;
+        }
+        
+        &:first-child,
+        &:last-child {
+            /*border-color: transparent;*/
+        }
+        
+        &:first-child {
+            /*border-radius: 0.375rem 0 0 0.375rem;*/
+        }
+
+        &:last-child {
+            /*border-radius: 0 0.375rem 0.375rem 0;*/
+        }
+
+        &.active {
+            background-color: $orangeColor;
+            color: $whiteColor;
+            border-color: $orangeColor;
+        }
+    }
+}

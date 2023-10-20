@@ -1,8 +1,8 @@
 .modal-detail-item {
-  position: absolute;
+  /*position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 
   &__wrap {
     position: relative;
@@ -32,10 +32,10 @@
     justify-content: center;
     width: 50%;
     flex: 1 0 auto;
+    padding: 2rem;
 
     img {
       width: 100%;
-      padding: 2rem;
     }
   }
 
@@ -44,6 +44,91 @@
     flex-direction: column;
     gap: 16px;
     overflow: hidden;
+
+    .ingredient__block {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 105px;
+      height: fit-content;
+      gap: 0.3125rem;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      &__title {
+        font-size: 0.875rem;
+        line-height: 1;
+        text-align: center;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      &__button {
+        position: relative;
+        border-radius: 12px;
+        padding: 30px;
+        background: $whiteColor;
+        border: 1px solid $borderColor;
+
+        &:hover {
+          border: 1px solid $orangeColor;
+        }
+
+        svg {
+          max-width: none;
+          height: fit-content;
+          width: fit-content;
+        }
+
+        &.inactive,
+        &.added {
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0.625rem;
+            height: 0.625rem;
+            background-position: center;
+            background-size: 35%;
+            background-repeat: no-repeat;
+            border: 1px solid;
+            border-radius: 50%;
+            margin: 0.5rem;
+            padding: 0.1875rem;
+          }
+
+          &.inactive {
+            opacity: 0.5;
+
+            & + span {
+              opacity: 0.5;
+            }
+
+            svg path {
+              fill: gray;
+            }
+
+            &::after {
+              background-image: url("../../img/svg/Cross.svg");
+              border-color: #a5a5a5;
+            }
+          }
+        }
+
+        &.added {
+          border-color: $orangeColor;
+
+          &::after {
+            border: none;
+            background-image: url("../../img/svg/Done.svg");
+            background-size: contain;
+          }
+        }
+      }
+    }
 
     .rightpanel {
       &__header {
@@ -66,27 +151,8 @@
       &__ingredients {
         display: flex;
         gap: 20px;
-        overflow: auto;
-
-        .ingredient__block {
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          max-width: 105px;
-          height: fit-content;
-          text-align: center;
-
-          img {
-            width: 40px;
-            height: 40px;
-          }
-
-          button {
-            border-radius: 12px;
-            padding: 30px;
-            position: relative;
-          }
-        }
+        overflow: auto hidden;
+        padding: 0 0 0.625rem 0;
       }
 
       &__dough {
@@ -97,8 +163,7 @@
 
         .dough {
           &__type {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: block;
           }
 
           &__size {
@@ -112,13 +177,21 @@
       }
 
       &__topping {
-        .topping__list {
-          display: flex;
-          gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
-          button {
-            position: relative;
-            padding: 30px;
+        .topping {
+          &__title {
+            @include font-inter;
+            font-weight: 600;
+          }
+
+          &__list {
+            display: flex;
+            gap: 20px;
+            overflow: auto hidden;
+            padding: 0 0 0.625rem 0;
           }
         }
       }
@@ -154,28 +227,32 @@
     }
   }
 
-  .button-modal-select {
-    background: $whiteColor;
-    border: 1px solid $borderColor;
-
-    &:hover {
-      border: 1px solid $orangeColor;
-    }
-  }
-
   .border-select {
     border: 1px solid $orangeColor;
 
     &::after {
       content: url(../../img/svg/Done.svg);
       position: absolute;
-      top: 8px;
-      right: 8px;
+      top: 0.5rem;
+      right: 0.5rem;
     }
   }
 }
 
 @media screen and (max-width: $tabletWidth) {
+  .modal-detail-item {
+    position: static;
+    transform: none;
+    overflow: auto;
+
+    &__wrap {
+      flex-direction: column;
+    }
+
+    &__leftpanel {
+      width: 100%;
+    }
+  }
   #modal-menu {
     padding: 20% 0 0 0;
   }
